@@ -9,10 +9,17 @@ struct addNote: View {
     
     @State private var message: String = ""
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         
-        Text((message == "" ? "Tap anywhere to begin typing" : "Click Submit to Save"))
+        Capsule()
+            .frame(width: 100, height: 8)
             .padding(.top, 10)
+            .foregroundColor(.gray)
+        
+        Text((message == "" ? "Tap anywhere to begin typing" : "Click Submit to Save"))
+            .padding(.top, 30)
             .foregroundColor(.gray)
         
         TextEditor(text: self.$message)
@@ -38,6 +45,8 @@ struct addNote: View {
             try? self.moc.save()
             
             message = ""
+            
+            presentationMode.wrappedValue.dismiss()
         }
         .disabled(message == "")
         .foregroundColor(message == "" ? .gray : .black)
