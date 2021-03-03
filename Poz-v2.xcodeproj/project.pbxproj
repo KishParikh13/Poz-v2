@@ -40,6 +40,12 @@
 		DE95210325EF54C10035358F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95210225EF54C10035358F /* Dashboard.swift */; };
 		DE95210425EF54C10035358F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95210225EF54C10035358F /* Dashboard.swift */; };
 		DE95210525EF54C10035358F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95210225EF54C10035358F /* Dashboard.swift */; };
+		DE95210D25EF7F150035358F /* RateMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95210C25EF7F150035358F /* RateMood.swift */; };
+		DE95210E25EF7F150035358F /* RateMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95210C25EF7F150035358F /* RateMood.swift */; };
+		DE95210F25EF7F150035358F /* RateMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95210C25EF7F150035358F /* RateMood.swift */; };
+		DE95211425EF82000035358F /* addNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95211325EF82000035358F /* addNote.swift */; };
+		DE95211525EF82000035358F /* addNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95211325EF82000035358F /* addNote.swift */; };
+		DE95211625EF82000035358F /* addNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95211325EF82000035358F /* addNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +89,8 @@
 		DE9520F425EF53D50035358F /* EnterName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterName.swift; sourceTree = "<group>"; };
 		DE9520FB25EF54680035358F /* TopTabMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabMenu.swift; sourceTree = "<group>"; };
 		DE95210225EF54C10035358F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		DE95210C25EF7F150035358F /* RateMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMood.swift; sourceTree = "<group>"; };
+		DE95211325EF82000035358F /* addNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,8 @@
 				DE9520DF25EF531F0035358F /* Onboarding.swift */,
 				DE95210225EF54C10035358F /* Dashboard.swift */,
 				DE9520CE25EF2D5D0035358F /* NotesList.swift */,
+				DE95210C25EF7F150035358F /* RateMood.swift */,
+				DE95211325EF82000035358F /* addNote.swift */,
 				DE9520D525EF508E0035358F /* BottomTabsMenu.swift */,
 				DE95209B25EF2B480035358F /* Assets.xcassets */,
 				DE9520A025EF2B480035358F /* LaunchScreen.storyboard */,
@@ -315,8 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE95211425EF82000035358F /* addNote.swift in Sources */,
 				DE9520CF25EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE95210325EF54C10035358F /* Dashboard.swift in Sources */,
+				DE95210D25EF7F150035358F /* RateMood.swift in Sources */,
 				DE9520F525EF53D50035358F /* EnterName.swift in Sources */,
 				DE9520FC25EF54680035358F /* TopTabMenu.swift in Sources */,
 				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
@@ -336,7 +348,9 @@
 				DE9520D025EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FD25EF54680035358F /* TopTabMenu.swift in Sources */,
 				DE95210425EF54C10035358F /* Dashboard.swift in Sources */,
+				DE95210E25EF7F150035358F /* RateMood.swift in Sources */,
 				DE9520F625EF53D50035358F /* EnterName.swift in Sources */,
+				DE95211525EF82000035358F /* addNote.swift in Sources */,
 				DE9520E125EF531F0035358F /* Onboarding.swift in Sources */,
 				DE9520D725EF508E0035358F /* BottomTabsMenu.swift in Sources */,
 			);
@@ -350,7 +364,9 @@
 				DE9520D125EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FE25EF54680035358F /* TopTabMenu.swift in Sources */,
 				DE95210525EF54C10035358F /* Dashboard.swift in Sources */,
+				DE95210F25EF7F150035358F /* RateMood.swift in Sources */,
 				DE9520F725EF53D50035358F /* EnterName.swift in Sources */,
+				DE95211625EF82000035358F /* addNote.swift in Sources */,
 				DE9520E225EF531F0035358F /* Onboarding.swift in Sources */,
 				DE9520D825EF508E0035358F /* BottomTabsMenu.swift in Sources */,
 			);

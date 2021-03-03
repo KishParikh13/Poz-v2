@@ -36,6 +36,7 @@ struct ContentView: View {
                     }
                 } else {
                     if (self.index == 0) {
+                        addNote()
                         Spacer()
                     }
                     if (self.index == 2) {

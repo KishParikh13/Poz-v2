@@ -17,7 +17,7 @@ struct Dashboard: View {
             appTopBar(index: self.$index, offset: self.$offset)
             
             if (index == 0) {
-               // EntriesListView()
+                Spacer()
             } else if (index == 1) {
                 NotesList()
             }
