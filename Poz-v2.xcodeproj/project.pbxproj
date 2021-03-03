@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -49,6 +49,16 @@
 		DE95211E25EFF6C70035358F /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95211D25EFF6C70035358F /* Stats.swift */; };
 		DE95211F25EFF6C70035358F /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95211D25EFF6C70035358F /* Stats.swift */; };
 		DE95212025EFF6C70035358F /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95211D25EFF6C70035358F /* Stats.swift */; };
+		DE95212425F0026A0035358F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209625EF2B480035358F /* ContentView.swift */; };
+		DE95212825F0026A0035358F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209625EF2B480035358F /* ContentView.swift */; };
+		DE95212C25F0026D0035358F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209425EF2B480035358F /* SceneDelegate.swift */; };
+		DE95212D25F0026D0035358F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209425EF2B480035358F /* SceneDelegate.swift */; };
+		DE95213125F0026F0035358F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209225EF2B480035358F /* AppDelegate.swift */; };
+		DE95213525F002700035358F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209225EF2B480035358F /* AppDelegate.swift */; };
+		DE95214425F006ED0035358F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95214325F006ED0035358F /* Notification.swift */; };
+		DE95214525F006ED0035358F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95214325F006ED0035358F /* Notification.swift */; };
+		DE95214625F006ED0035358F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95214325F006ED0035358F /* Notification.swift */; };
+		DE95214C25F00BA40035358F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DE95214B25F00BA40035358F /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +105,7 @@
 		DE95210C25EF7F150035358F /* RateMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMood.swift; sourceTree = "<group>"; };
 		DE95211325EF82000035358F /* addNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNote.swift; sourceTree = "<group>"; };
 		DE95211D25EFF6C70035358F /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		DE95214325F006ED0035358F /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE95214C25F00BA40035358F /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +168,7 @@
 				DE9520CE25EF2D5D0035358F /* NotesList.swift */,
 				DE95210C25EF7F150035358F /* RateMood.swift */,
 				DE95211325EF82000035358F /* addNote.swift */,
+				DE95214325F006ED0035358F /* Notification.swift */,
 				DE9520D525EF508E0035358F /* BottomTabsMenu.swift */,
 				DE95209B25EF2B480035358F /* Assets.xcassets */,
 				DE9520A025EF2B480035358F /* LaunchScreen.storyboard */,
@@ -210,6 +223,9 @@
 			dependencies = (
 			);
 			name = "Poz-v2";
+			packageProductDependencies = (
+				DE95214B25F00BA40035358F /* SwiftUICharts */,
+			);
 			productName = "Poz-v2";
 			productReference = DE95208F25EF2B480035358F /* Poz-v2.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +297,9 @@
 				Base,
 			);
 			mainGroup = DE95208625EF2B480035358F;
+			packageReferences = (
+				DE95214A25F00BA40035358F /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = DE95209025EF2B480035358F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +359,7 @@
 				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
 				DE9520D625EF508E0035358F /* BottomTabsMenu.swift in Sources */,
 				DE9520E025EF531F0035358F /* Onboarding.swift in Sources */,
+				DE95214425F006ED0035358F /* Notification.swift in Sources */,
 				DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */,
 				DE95209725EF2B480035358F /* ContentView.swift in Sources */,
 				DE95209A25EF2B480035358F /* Poz.xcdatamodeld in Sources */,
@@ -351,15 +371,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */,
+				DE95212425F0026A0035358F /* ContentView.swift in Sources */,
 				DE95211F25EFF6C70035358F /* Stats.swift in Sources */,
 				DE9520D025EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FD25EF54680035358F /* TopTabMenu.swift in Sources */,
 				DE95210425EF54C10035358F /* Dashboard.swift in Sources */,
 				DE95210E25EF7F150035358F /* RateMood.swift in Sources */,
 				DE9520F625EF53D50035358F /* EnterName.swift in Sources */,
+				DE95213125F0026F0035358F /* AppDelegate.swift in Sources */,
 				DE95211525EF82000035358F /* addNote.swift in Sources */,
+				DE95214525F006ED0035358F /* Notification.swift in Sources */,
 				DE9520E125EF531F0035358F /* Onboarding.swift in Sources */,
 				DE9520D725EF508E0035358F /* BottomTabsMenu.swift in Sources */,
+				DE95212C25F0026D0035358F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,15 +392,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */,
+				DE95212825F0026A0035358F /* ContentView.swift in Sources */,
 				DE95212025EFF6C70035358F /* Stats.swift in Sources */,
 				DE9520D125EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FE25EF54680035358F /* TopTabMenu.swift in Sources */,
 				DE95210525EF54C10035358F /* Dashboard.swift in Sources */,
 				DE95210F25EF7F150035358F /* RateMood.swift in Sources */,
 				DE9520F725EF53D50035358F /* EnterName.swift in Sources */,
+				DE95213525F002700035358F /* AppDelegate.swift in Sources */,
 				DE95211625EF82000035358F /* addNote.swift in Sources */,
+				DE95214625F006ED0035358F /* Notification.swift in Sources */,
 				DE9520E225EF531F0035358F /* Onboarding.swift in Sources */,
 				DE9520D825EF508E0035358F /* BottomTabsMenu.swift in Sources */,
+				DE95212D25F0026D0035358F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +711,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE95214A25F00BA40035358F /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE95214B25F00BA40035358F /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE95214A25F00BA40035358F /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DE95209825EF2B480035358F /* Poz.xcdatamodeld */ = {

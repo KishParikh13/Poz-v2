@@ -1,11 +1,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State var index = 0
     @State private var isWelcomeScreensShowing = false;
     @State private var isEnterNameScreenShowing = false;
 
     @State public var addNoteShowing = false;
+    
+    @State private var successMessage: Bool = false
     
     var body: some View {
         VStack {
@@ -38,13 +41,16 @@ struct ContentView: View {
                     }
                 } else {
                     if (self.index == 0) {
-                        Spacer()
-                        Button(action: { addNoteShowing.toggle() }, label: {Text("Add Note")})
-                            .sheet(isPresented: $addNoteShowing, content: {
-                                addNote()
-                            })
-                        
-                        Spacer()
+                        VStack {
+                            Spacer()
+                            Button(action: {
+                                    addNoteShowing.toggle() }, label: {Text("Add Note")})
+                                .sheet(isPresented: $addNoteShowing, content: {
+                                    addNote()
+                                })
+                            
+                            Spacer()
+                        }
                     }
                     if (self.index == 2) {
                         Dashboard()

@@ -11,6 +11,9 @@ struct addNote: View {
     
     @Environment(\.presentationMode) var presentationMode
     
+    
+    @State private var successMessage: Bool = false
+    
     var body: some View {
         
         Capsule()
@@ -26,7 +29,6 @@ struct addNote: View {
             // make the color of the placeholder gray
             .padding(.top, 40)
             .padding(.horizontal, 40)
-            
         
         Button("Submit") {
                 
@@ -41,12 +43,15 @@ struct addNote: View {
             note.note = "\(message)"
             note.date = "\(chosenDate)" // init()
             note.emoji = "\(chosenEmoji)"
+            note.stringLength = Double(message.count)
             
             try? self.moc.save()
             
             message = ""
-            
+
             presentationMode.wrappedValue.dismiss()
+            
+            self.successMessage.toggle()
         }
         .disabled(message == "")
         .foregroundColor(message == "" ? .gray : .black)
@@ -57,5 +62,7 @@ struct addNote: View {
         .cornerRadius(50)
         .padding(.horizontal, 20)
         .padding(.bottom, 20)
+        
+        
     }
 }
