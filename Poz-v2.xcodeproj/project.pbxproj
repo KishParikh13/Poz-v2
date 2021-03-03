@@ -16,6 +16,9 @@
 		DE9520A225EF2B480035358F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9520A025EF2B480035358F /* LaunchScreen.storyboard */; };
 		DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9520AC25EF2B490035358F /* Poz_v2Tests.swift */; };
 		DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9520B725EF2B490035358F /* Poz_v2UITests.swift */; };
+		DE9520CF25EF2D5D0035358F /* NotesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9520CE25EF2D5D0035358F /* NotesList.swift */; };
+		DE9520D025EF2D5D0035358F /* NotesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9520CE25EF2D5D0035358F /* NotesList.swift */; };
+		DE9520D125EF2D5D0035358F /* NotesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9520CE25EF2D5D0035358F /* NotesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,7 @@
 		DE9520B325EF2B490035358F /* Poz-v2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Poz-v2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9520B725EF2B490035358F /* Poz_v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poz_v2UITests.swift; sourceTree = "<group>"; };
 		DE9520B925EF2B490035358F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9520CE25EF2D5D0035358F /* NotesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				DE95209225EF2B480035358F /* AppDelegate.swift */,
 				DE95209425EF2B480035358F /* SceneDelegate.swift */,
 				DE95209625EF2B480035358F /* ContentView.swift */,
+				DE9520CE25EF2D5D0035358F /* NotesList.swift */,
 				DE95209B25EF2B480035358F /* Assets.xcassets */,
 				DE9520A025EF2B480035358F /* LaunchScreen.storyboard */,
 				DE9520A325EF2B480035358F /* Info.plist */,
@@ -269,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9520CF25EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
 				DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */,
 				DE95209725EF2B480035358F /* ContentView.swift in Sources */,
@@ -281,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */,
+				DE9520D025EF2D5D0035358F /* NotesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */,
+				DE9520D125EF2D5D0035358F /* NotesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
