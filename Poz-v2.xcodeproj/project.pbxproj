@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE95209325EF2B480035358F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209225EF2B480035358F /* AppDelegate.swift */; };
+		DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209425EF2B480035358F /* SceneDelegate.swift */; };
+		DE95209725EF2B480035358F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209625EF2B480035358F /* ContentView.swift */; };
+		DE95209A25EF2B480035358F /* Poz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE95209825EF2B480035358F /* Poz.xcdatamodeld */; };
+		DE95209C25EF2B480035358F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE95209B25EF2B480035358F /* Assets.xcassets */; };
+		DE95209F25EF2B480035358F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE95209E25EF2B480035358F /* Preview Assets.xcassets */; };
+		DE9520A225EF2B480035358F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9520A025EF2B480035358F /* LaunchScreen.storyboard */; };
+		DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9520AC25EF2B490035358F /* Poz_v2Tests.swift */; };
+		DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9520B725EF2B490035358F /* Poz_v2UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE9520A925EF2B490035358F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE95208725EF2B480035358F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE95208E25EF2B480035358F;
+			remoteInfo = "Poz-v2";
+		};
+		DE9520B425EF2B490035358F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE95208725EF2B480035358F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE95208E25EF2B480035358F;
+			remoteInfo = "Poz-v2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE95208F25EF2B480035358F /* Poz-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poz-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE95209225EF2B480035358F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE95209425EF2B480035358F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DE95209625EF2B480035358F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE95209925EF2B480035358F /* Poz_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Poz_v2.xcdatamodel; sourceTree = "<group>"; };
+		DE95209B25EF2B480035358F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE95209E25EF2B480035358F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE9520A125EF2B480035358F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE9520A325EF2B480035358F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9520A825EF2B490035358F /* Poz-v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Poz-v2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9520AC25EF2B490035358F /* Poz_v2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poz_v2Tests.swift; sourceTree = "<group>"; };
+		DE9520AE25EF2B490035358F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9520B325EF2B490035358F /* Poz-v2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Poz-v2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9520B725EF2B490035358F /* Poz_v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poz_v2UITests.swift; sourceTree = "<group>"; };
+		DE9520B925EF2B490035358F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE95208C25EF2B480035358F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9520A525EF2B490035358F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9520B025EF2B490035358F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE95208625EF2B480035358F = {
+			isa = PBXGroup;
+			children = (
+				DE95209125EF2B480035358F /* Poz-v2 */,
+				DE9520AB25EF2B490035358F /* Poz-v2Tests */,
+				DE9520B625EF2B490035358F /* Poz-v2UITests */,
+				DE95209025EF2B480035358F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE95209025EF2B480035358F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE95208F25EF2B480035358F /* Poz-v2.app */,
+				DE9520A825EF2B490035358F /* Poz-v2Tests.xctest */,
+				DE9520B325EF2B490035358F /* Poz-v2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE95209125EF2B480035358F /* Poz-v2 */ = {
+			isa = PBXGroup;
+			children = (
+				DE95209225EF2B480035358F /* AppDelegate.swift */,
+				DE95209425EF2B480035358F /* SceneDelegate.swift */,
+				DE95209625EF2B480035358F /* ContentView.swift */,
+				DE95209B25EF2B480035358F /* Assets.xcassets */,
+				DE9520A025EF2B480035358F /* LaunchScreen.storyboard */,
+				DE9520A325EF2B480035358F /* Info.plist */,
+				DE95209825EF2B480035358F /* Poz.xcdatamodeld */,
+				DE95209D25EF2B480035358F /* Preview Content */,
+			);
+			path = "Poz-v2";
+			sourceTree = "<group>";
+		};
+		DE95209D25EF2B480035358F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE95209E25EF2B480035358F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DE9520AB25EF2B490035358F /* Poz-v2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DE9520AC25EF2B490035358F /* Poz_v2Tests.swift */,
+				DE9520AE25EF2B490035358F /* Info.plist */,
+			);
+			path = "Poz-v2Tests";
+			sourceTree = "<group>";
+		};
+		DE9520B625EF2B490035358F /* Poz-v2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE9520B725EF2B490035358F /* Poz_v2UITests.swift */,
+				DE9520B925EF2B490035358F /* Info.plist */,
+			);
+			path = "Poz-v2UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE95208E25EF2B480035358F /* Poz-v2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE9520BC25EF2B490035358F /* Build configuration list for PBXNativeTarget "Poz-v2" */;
+			buildPhases = (
+				DE95208B25EF2B480035358F /* Sources */,
+				DE95208C25EF2B480035358F /* Frameworks */,
+				DE95208D25EF2B480035358F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Poz-v2";
+			productName = "Poz-v2";
+			productReference = DE95208F25EF2B480035358F /* Poz-v2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE9520A725EF2B490035358F /* Poz-v2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE9520BF25EF2B490035358F /* Build configuration list for PBXNativeTarget "Poz-v2Tests" */;
+			buildPhases = (
+				DE9520A425EF2B490035358F /* Sources */,
+				DE9520A525EF2B490035358F /* Frameworks */,
+				DE9520A625EF2B490035358F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE9520AA25EF2B490035358F /* PBXTargetDependency */,
+			);
+			name = "Poz-v2Tests";
+			productName = "Poz-v2Tests";
+			productReference = DE9520A825EF2B490035358F /* Poz-v2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE9520B225EF2B490035358F /* Poz-v2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE9520C225EF2B490035358F /* Build configuration list for PBXNativeTarget "Poz-v2UITests" */;
+			buildPhases = (
+				DE9520AF25EF2B490035358F /* Sources */,
+				DE9520B025EF2B490035358F /* Frameworks */,
+				DE9520B125EF2B490035358F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE9520B525EF2B490035358F /* PBXTargetDependency */,
+			);
+			name = "Poz-v2UITests";
+			productName = "Poz-v2UITests";
+			productReference = DE9520B325EF2B490035358F /* Poz-v2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE95208725EF2B480035358F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					DE95208E25EF2B480035358F = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					DE9520A725EF2B490035358F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DE95208E25EF2B480035358F;
+					};
+					DE9520B225EF2B490035358F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DE95208E25EF2B480035358F;
+					};
+				};
+			};
+			buildConfigurationList = DE95208A25EF2B480035358F /* Build configuration list for PBXProject "Poz-v2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE95208625EF2B480035358F;
+			productRefGroup = DE95209025EF2B480035358F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE95208E25EF2B480035358F /* Poz-v2 */,
+				DE9520A725EF2B490035358F /* Poz-v2Tests */,
+				DE9520B225EF2B490035358F /* Poz-v2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE95208D25EF2B480035358F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9520A225EF2B480035358F /* LaunchScreen.storyboard in Resources */,
+				DE95209F25EF2B480035358F /* Preview Assets.xcassets in Resources */,
+				DE95209C25EF2B480035358F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9520A625EF2B490035358F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9520B125EF2B490035358F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE95208B25EF2B480035358F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
+				DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */,
+				DE95209725EF2B480035358F /* ContentView.swift in Sources */,
+				DE95209A25EF2B480035358F /* Poz.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9520A425EF2B490035358F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9520AF25EF2B490035358F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE9520AA25EF2B490035358F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE95208E25EF2B480035358F /* Poz-v2 */;
+			targetProxy = DE9520A925EF2B490035358F /* PBXContainerItemProxy */;
+		};
+		DE9520B525EF2B490035358F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE95208E25EF2B480035358F /* Poz-v2 */;
+			targetProxy = DE9520B425EF2B490035358F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE9520A025EF2B480035358F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE9520A125EF2B480035358F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE9520BA25EF2B490035358F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE9520BB25EF2B490035358F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE9520BD25EF2B490035358F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Poz-v2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Poz-v2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kish.Poz-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE9520BE25EF2B490035358F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Poz-v2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Poz-v2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kish.Poz-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE9520C025EF2B490035358F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Poz-v2Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kish.Poz-v2Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poz-v2.app/Poz-v2";
+			};
+			name = Debug;
+		};
+		DE9520C125EF2B490035358F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Poz-v2Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kish.Poz-v2Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poz-v2.app/Poz-v2";
+			};
+			name = Release;
+		};
+		DE9520C325EF2B490035358F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Poz-v2UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kish.Poz-v2UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Poz-v2";
+			};
+			name = Debug;
+		};
+		DE9520C425EF2B490035358F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Poz-v2UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kish.Poz-v2UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Poz-v2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE95208A25EF2B480035358F /* Build configuration list for PBXProject "Poz-v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9520BA25EF2B490035358F /* Debug */,
+				DE9520BB25EF2B490035358F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE9520BC25EF2B490035358F /* Build configuration list for PBXNativeTarget "Poz-v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9520BD25EF2B490035358F /* Debug */,
+				DE9520BE25EF2B490035358F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE9520BF25EF2B490035358F /* Build configuration list for PBXNativeTarget "Poz-v2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9520C025EF2B490035358F /* Debug */,
+				DE9520C125EF2B490035358F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE9520C225EF2B490035358F /* Build configuration list for PBXNativeTarget "Poz-v2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9520C325EF2B490035358F /* Debug */,
+				DE9520C425EF2B490035358F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE95209825EF2B480035358F /* Poz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE95209925EF2B480035358F /* Poz_v2.xcdatamodel */,
+			);
+			currentVersion = DE95209925EF2B480035358F /* Poz_v2.xcdatamodel */;
+			path = Poz.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DE95208725EF2B480035358F /* Project object */;
+}
