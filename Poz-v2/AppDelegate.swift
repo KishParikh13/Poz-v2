@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Poz-v2
-//
-//  Created by Kish Parikh on 3/2/21.
-//
-
 import UIKit
 import CoreData
 
