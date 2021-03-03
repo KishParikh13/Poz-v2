@@ -26,7 +26,7 @@ struct Dashboard: View {
     }
 }
 
-struct Stats_Previews: PreviewProvider {
+struct Dashboard_Previews: PreviewProvider {
     static var previews: some View {
         Dashboard()
     }
