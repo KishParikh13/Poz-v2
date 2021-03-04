@@ -2,20 +2,19 @@ import SwiftUI
 
 struct addNote: View {
     
-//    sortDescriptor = NSSortDescriptor(key: "createdAt", ascending "true)
-    
+    //get data from CoreData
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Note.entity(), sortDescriptors: []) var notes: FetchedResults<Note>
     
+    //vars
     @State private var message: String = ""
     @State private var emoji: String = ""
     
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var presentationMode //check if pop up active
     
     @State var selected = ""
     
-    @State private var successMessage: Bool = false
-    
+    //content
     var body: some View {
         
         Capsule()
@@ -27,35 +26,44 @@ struct addNote: View {
             .padding(.top, 30)
             .foregroundColor(.gray)
         
+        //text input
         TextEditor(text: self.$message)
-            // make the color of the placeholder gray
             .padding(.top, 40)
             .padding(.horizontal, 40)
         
+        //emoji picker
+        Text("Scroll below to add emoji")
+            .padding(.top, 30)
+            .foregroundColor(.gray)
+        
         CustomPicker(selected: self.$selected)
         
+        //submit button
         Button("Submit") {
-                
-            let dates = ["2/1/2021", "2/5/2021", "2/7/2021"]
-            let chosenDate = dates.randomElement()!
             
-            let emojis = ["😙", "😋", "🤪"]
-            let chosenEmoji = emojis.randomElement()!
-            
+            // create note item
             let note = Note(context: self.moc)
-            note.id = UUID()
-            note.note = "\(message)"
-            note.date = "\(chosenDate)" // init()
+            note.id = UUID() //create id
+            note.note = "\(message)" //input message
+            
+            // get current data and format it
+            let date = NSDate()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE, MMM d, yyyy h:mm a"
+            let dateString = dateFormatter.string(from: date as Date)
+            
+            //assign vars on click
+            note.date = "\(dateString)"
             note.emoji = "\(selected)"
             note.stringLength = Double(message.count)
             
-            try? self.moc.save()
             
-            message = ""
+            try? self.moc.save() //save inputted values
+            
+            message = "" //reset input
 
-            presentationMode.wrappedValue.dismiss()
-            
-            self.successMessage.toggle()
+            presentationMode.wrappedValue.dismiss() //dismiss popup on click
+
         }
         .disabled(message == "")
         .foregroundColor(message == "" ? .gray : .black)
@@ -66,7 +74,5 @@ struct addNote: View {
         .cornerRadius(50)
         .padding(.horizontal, 20)
         .padding(.bottom, 20)
-        
-        
     }
 }
