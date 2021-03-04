@@ -1,8 +1,10 @@
 import SwiftUI
 
+
 class User : ObservableObject {
-    @Published var name = "You"
+    @Published var name = ""
 }
+
 
 struct ContentView: View {
     
@@ -12,6 +14,8 @@ struct ContentView: View {
     @State private var isEnterNameScreenShowing = true; //enter name screen
 
     @State public var addNoteShowing = false;
+    
+    let user = User()
     
     var body: some View {
         VStack {
@@ -31,7 +35,7 @@ struct ContentView: View {
             } else {
                 
                 if (isEnterNameScreenShowing == true) {
-                    EnterName()
+                    EnterName().environmentObject(user)
          
                     ZStack {
                         Button(action: {
@@ -54,6 +58,9 @@ struct ContentView: View {
                     if (self.index == 0) {
                         VStack {
                             Spacer()
+                            
+                            userNameOutput().environmentObject(user)
+                            
                             Button(action: {
                                     addNoteShowing.toggle() }, label: {Text("Add Note")})
                                 .sheet(isPresented: $addNoteShowing, content: {

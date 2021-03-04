@@ -6,8 +6,6 @@ struct NotesList: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Note.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Note.createdAt, ascending: false)]) var notes: FetchedResults<Note>
     
-    @EnvironmentObject var user: User
-    
     var body: some View {
         
         //list of all notes

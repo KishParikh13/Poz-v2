@@ -4,7 +4,7 @@ struct EnterName: View {
     
     @EnvironmentObject var user: User
     
-    @State public var name: String = ""
+//    @State public var name: String = ""
     @State public var isEditing = false
     
     var body: some View {
@@ -14,7 +14,7 @@ struct EnterName: View {
             EnterName_Text()
             
             // text field
-            TextField("Your name", text: $name)
+            TextField("Your name", text: $user.name)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .border(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
@@ -32,6 +32,16 @@ struct EnterName: View {
         //.navigationBarBackButtonHidden(true)
     }
 }
+
+struct userNameOutput: View {
+    @EnvironmentObject var user: User
+    
+    var body: some View {
+        Text("Hey, " + user.name)
+            .padding()
+    }
+}
+
 
 // heading text
 struct EnterName_Text: View {
