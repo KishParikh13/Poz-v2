@@ -56,18 +56,6 @@
 		DE95215125F09B800035358F /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95215025F09B800035358F /* CustomPicker.swift */; };
 		DE95215525F09B820035358F /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95215025F09B800035358F /* CustomPicker.swift */; };
 		DE95215925F09B830035358F /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95215025F09B800035358F /* CustomPicker.swift */; };
-		DE95216D25F148960035358F /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216925F148960035358F /* Note+CoreDataClass.swift */; };
-		DE95216E25F148960035358F /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216925F148960035358F /* Note+CoreDataClass.swift */; };
-		DE95216F25F148960035358F /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216925F148960035358F /* Note+CoreDataClass.swift */; };
-		DE95217025F148960035358F /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216A25F148960035358F /* Note+CoreDataProperties.swift */; };
-		DE95217125F148960035358F /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216A25F148960035358F /* Note+CoreDataProperties.swift */; };
-		DE95217225F148960035358F /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216A25F148960035358F /* Note+CoreDataProperties.swift */; };
-		DE95217325F148960035358F /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216B25F148960035358F /* User+CoreDataClass.swift */; };
-		DE95217425F148960035358F /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216B25F148960035358F /* User+CoreDataClass.swift */; };
-		DE95217525F148960035358F /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216B25F148960035358F /* User+CoreDataClass.swift */; };
-		DE95217625F148960035358F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216C25F148960035358F /* User+CoreDataProperties.swift */; };
-		DE95217725F148960035358F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216C25F148960035358F /* User+CoreDataProperties.swift */; };
-		DE95217825F148960035358F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95216C25F148960035358F /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,10 +102,6 @@
 		DE95211325EF82000035358F /* addNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNote.swift; sourceTree = "<group>"; };
 		DE95211D25EFF6C70035358F /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		DE95215025F09B800035358F /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
-		DE95216925F148960035358F /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DE95216A25F148960035358F /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DE95216B25F148960035358F /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DE95216C25F148960035358F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +133,6 @@
 		DE95208625EF2B480035358F = {
 			isa = PBXGroup;
 			children = (
-				DE95216925F148960035358F /* Note+CoreDataClass.swift */,
-				DE95216A25F148960035358F /* Note+CoreDataProperties.swift */,
-				DE95216B25F148960035358F /* User+CoreDataClass.swift */,
-				DE95216C25F148960035358F /* User+CoreDataProperties.swift */,
 				DE95209125EF2B480035358F /* Poz-v2 */,
 				DE9520AB25EF2B490035358F /* Poz-v2Tests */,
 				DE9520B625EF2B490035358F /* Poz-v2UITests */,
@@ -365,22 +345,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE95211425EF82000035358F /* addNote.swift in Sources */,
-				DE95216D25F148960035358F /* Note+CoreDataClass.swift in Sources */,
 				DE95211E25EFF6C70035358F /* Stats.swift in Sources */,
 				DE9520CF25EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE95210325EF54C10035358F /* Dashboard.swift in Sources */,
 				DE95215125F09B800035358F /* CustomPicker.swift in Sources */,
-				DE95217325F148960035358F /* User+CoreDataClass.swift in Sources */,
 				DE9520F525EF53D50035358F /* EnterName.swift in Sources */,
 				DE9520FC25EF54680035358F /* TopTabMenu.swift in Sources */,
 				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
 				DE9520D625EF508E0035358F /* BottomTabsMenu.swift in Sources */,
 				DE9520E025EF531F0035358F /* Onboarding.swift in Sources */,
 				DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */,
-				DE95217625F148960035358F /* User+CoreDataProperties.swift in Sources */,
 				DE95209725EF2B480035358F /* ContentView.swift in Sources */,
 				DE95209A25EF2B480035358F /* Poz.xcdatamodeld in Sources */,
-				DE95217025F148960035358F /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,22 +365,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */,
-				DE95216E25F148960035358F /* Note+CoreDataClass.swift in Sources */,
 				DE95212425F0026A0035358F /* ContentView.swift in Sources */,
 				DE95211F25EFF6C70035358F /* Stats.swift in Sources */,
 				DE9520D025EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FD25EF54680035358F /* TopTabMenu.swift in Sources */,
-				DE95217425F148960035358F /* User+CoreDataClass.swift in Sources */,
 				DE95215525F09B820035358F /* CustomPicker.swift in Sources */,
 				DE95210425EF54C10035358F /* Dashboard.swift in Sources */,
 				DE9520F625EF53D50035358F /* EnterName.swift in Sources */,
 				DE95213125F0026F0035358F /* AppDelegate.swift in Sources */,
 				DE95211525EF82000035358F /* addNote.swift in Sources */,
 				DE9520E125EF531F0035358F /* Onboarding.swift in Sources */,
-				DE95217725F148960035358F /* User+CoreDataProperties.swift in Sources */,
 				DE9520D725EF508E0035358F /* BottomTabsMenu.swift in Sources */,
 				DE95212C25F0026D0035358F /* SceneDelegate.swift in Sources */,
-				DE95217125F148960035358F /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,22 +385,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */,
-				DE95216F25F148960035358F /* Note+CoreDataClass.swift in Sources */,
 				DE95212825F0026A0035358F /* ContentView.swift in Sources */,
 				DE95212025EFF6C70035358F /* Stats.swift in Sources */,
 				DE9520D125EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FE25EF54680035358F /* TopTabMenu.swift in Sources */,
-				DE95217525F148960035358F /* User+CoreDataClass.swift in Sources */,
 				DE95215925F09B830035358F /* CustomPicker.swift in Sources */,
 				DE95210525EF54C10035358F /* Dashboard.swift in Sources */,
 				DE9520F725EF53D50035358F /* EnterName.swift in Sources */,
 				DE95213525F002700035358F /* AppDelegate.swift in Sources */,
 				DE95211625EF82000035358F /* addNote.swift in Sources */,
 				DE9520E225EF531F0035358F /* Onboarding.swift in Sources */,
-				DE95217825F148960035358F /* User+CoreDataProperties.swift in Sources */,
 				DE9520D825EF508E0035358F /* BottomTabsMenu.swift in Sources */,
 				DE95212D25F0026D0035358F /* SceneDelegate.swift in Sources */,
-				DE95217225F148960035358F /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

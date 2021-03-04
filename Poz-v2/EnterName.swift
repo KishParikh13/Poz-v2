@@ -2,11 +2,9 @@ import SwiftUI
 
 struct EnterName: View {
     
-    //get data from CoreData
-    //@Environment(\.managedObjectContext) var mocuser
-    //@FetchRequest(entity: User.entity(), sortDescriptors: []) var users: FetchedResults<User>
+    @EnvironmentObject var user: User
     
-    @State public var username: String = ""
+    @State public var name: String = ""
     @State public var isEditing = false
     
     var body: some View {
@@ -16,15 +14,7 @@ struct EnterName: View {
             EnterName_Text()
             
             // text field
-            TextField( "First name", text: $username, onEditingChanged: {
-                        
-                (changed) in print("Username onEditingChanged - \(changed)")
-                
-//                let user = User(context: self.mocuser)
-//                user.id = UUID() //create id
-//                user.name = "\(username)" //input message
-                
-            })
+            TextField("Your name", text: $name)
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .border(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))

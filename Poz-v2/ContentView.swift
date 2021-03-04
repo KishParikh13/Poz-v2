@@ -1,5 +1,9 @@
 import SwiftUI
 
+class User : ObservableObject {
+    @Published var name = "You"
+}
+
 struct ContentView: View {
     
     //vars to control which screen/tab is showing
