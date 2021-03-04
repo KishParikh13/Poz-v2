@@ -8,9 +8,11 @@ struct addNote: View {
     @FetchRequest(entity: Note.entity(), sortDescriptors: []) var notes: FetchedResults<Note>
     
     @State private var message: String = ""
+    @State private var emoji: String = ""
     
     @Environment(\.presentationMode) var presentationMode
     
+    @State var selected = ""
     
     @State private var successMessage: Bool = false
     
@@ -21,7 +23,7 @@ struct addNote: View {
             .padding(.top, 10)
             .foregroundColor(.gray)
         
-        Text((message == "" ? "Tap anywhere to begin typing" : "Click Submit to Save"))
+        Text((message == "" ? "Type your thoughts" : "Click Submit to Save"))
             .padding(.top, 30)
             .foregroundColor(.gray)
         
@@ -29,6 +31,8 @@ struct addNote: View {
             // make the color of the placeholder gray
             .padding(.top, 40)
             .padding(.horizontal, 40)
+        
+        CustomPicker(selected: self.$selected)
         
         Button("Submit") {
                 
@@ -42,7 +46,7 @@ struct addNote: View {
             note.id = UUID()
             note.note = "\(message)"
             note.date = "\(chosenDate)" // init()
-            note.emoji = "\(chosenEmoji)"
+            note.emoji = "\(selected)"
             note.stringLength = Double(message.count)
             
             try? self.moc.save()

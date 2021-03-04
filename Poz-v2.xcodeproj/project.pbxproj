@@ -59,6 +59,9 @@
 		DE95214525F006ED0035358F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95214325F006ED0035358F /* Notification.swift */; };
 		DE95214625F006ED0035358F /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95214325F006ED0035358F /* Notification.swift */; };
 		DE95214C25F00BA40035358F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DE95214B25F00BA40035358F /* SwiftUICharts */; };
+		DE95215125F09B800035358F /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95215025F09B800035358F /* CustomPicker.swift */; };
+		DE95215525F09B820035358F /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95215025F09B800035358F /* CustomPicker.swift */; };
+		DE95215925F09B830035358F /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95215025F09B800035358F /* CustomPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,7 @@
 		DE95211325EF82000035358F /* addNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNote.swift; sourceTree = "<group>"; };
 		DE95211D25EFF6C70035358F /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		DE95214325F006ED0035358F /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		DE95215025F09B800035358F /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 				DE9520CE25EF2D5D0035358F /* NotesList.swift */,
 				DE95210C25EF7F150035358F /* RateMood.swift */,
 				DE95211325EF82000035358F /* addNote.swift */,
+				DE95215025F09B800035358F /* CustomPicker.swift */,
 				DE95214325F006ED0035358F /* Notification.swift */,
 				DE9520D525EF508E0035358F /* BottomTabsMenu.swift */,
 				DE95209B25EF2B480035358F /* Assets.xcassets */,
@@ -354,6 +359,7 @@
 				DE9520CF25EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE95210325EF54C10035358F /* Dashboard.swift in Sources */,
 				DE95210D25EF7F150035358F /* RateMood.swift in Sources */,
+				DE95215125F09B800035358F /* CustomPicker.swift in Sources */,
 				DE9520F525EF53D50035358F /* EnterName.swift in Sources */,
 				DE9520FC25EF54680035358F /* TopTabMenu.swift in Sources */,
 				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
@@ -375,6 +381,7 @@
 				DE95211F25EFF6C70035358F /* Stats.swift in Sources */,
 				DE9520D025EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FD25EF54680035358F /* TopTabMenu.swift in Sources */,
+				DE95215525F09B820035358F /* CustomPicker.swift in Sources */,
 				DE95210425EF54C10035358F /* Dashboard.swift in Sources */,
 				DE95210E25EF7F150035358F /* RateMood.swift in Sources */,
 				DE9520F625EF53D50035358F /* EnterName.swift in Sources */,
@@ -396,6 +403,7 @@
 				DE95212025EFF6C70035358F /* Stats.swift in Sources */,
 				DE9520D125EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FE25EF54680035358F /* TopTabMenu.swift in Sources */,
+				DE95215925F09B830035358F /* CustomPicker.swift in Sources */,
 				DE95210525EF54C10035358F /* Dashboard.swift in Sources */,
 				DE95210F25EF7F150035358F /* RateMood.swift in Sources */,
 				DE9520F725EF53D50035358F /* EnterName.swift in Sources */,

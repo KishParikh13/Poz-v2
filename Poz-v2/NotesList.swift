@@ -6,7 +6,6 @@ struct NotesList: View {
     
     var body: some View {
         
-        
         VStack {
             List {
                 ForEach (notes, id: \.id) { notes in
