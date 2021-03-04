@@ -4,7 +4,7 @@ struct NotesList: View {
     
     //get data from core data
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Note.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Note.date, ascending: false)]) var notes: FetchedResults<Note>
+    @FetchRequest(entity: Note.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Note.createdAt, ascending: false)]) var notes: FetchedResults<Note>
     
     var body: some View {
         

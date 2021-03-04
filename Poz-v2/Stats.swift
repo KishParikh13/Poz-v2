@@ -1,12 +1,7 @@
-//
-//  Stats.swift
-//  Poz-v2
-//
-//  Created by Kish Parikh on 3/3/21.
-//
-
 import SwiftUI
 import SwiftUICharts
+
+//using library for charts https://github.com/AppPear/ChartView
 
 struct Stats: View {
     @Environment(\.managedObjectContext) var moc

@@ -1,27 +1,30 @@
 import SwiftUI
 
 struct EnterName: View {
+    
+    //get data from CoreData
+    //@Environment(\.managedObjectContext) var mocuser
+    //@FetchRequest(entity: User.entity(), sortDescriptors: []) var users: FetchedResults<User>
+    
     @State public var username: String = ""
     @State public var isEditing = false
     
     var body: some View {
         VStack {
-            
-            //testing custom back button
-//            NavigationLink(destination: Home()) {
-//                    Text("Back")
-//                        .font(Font.custom("Poppins-Regular", size: 14))
-//                        .padding(.horizontal, 20)
-//            }
-//            .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
-//            .padding(.top, 60)
-//            .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-            
+
             //heading text
             EnterName_Text()
             
             // text field
-            TextField( "First name", text: $username)
+            TextField( "First name", text: $username, onEditingChanged: {
+                        
+                (changed) in print("Username onEditingChanged - \(changed)")
+                
+//                let user = User(context: self.mocuser)
+//                user.id = UUID() //create id
+//                user.name = "\(username)" //input message
+                
+            })
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .border(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))

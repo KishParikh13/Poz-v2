@@ -4,7 +4,6 @@ struct addNote: View {
     
     //get data from CoreData
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Note.entity(), sortDescriptors: []) var notes: FetchedResults<Note>
     
     //vars
     @State private var message: String = ""
@@ -27,9 +26,12 @@ struct addNote: View {
             .foregroundColor(.gray)
         
         //text input
-        TextEditor(text: self.$message)
-            .padding(.top, 40)
-            .padding(.horizontal, 40)
+        ZStack {
+            TextEditor(text: self.$message)
+            Text("Text").opacity(0).padding(.all, 8)
+        }
+        .padding(.top, 20)
+        .padding(.horizontal, 40)
         
         //emoji picker
         Text("Scroll below to add emoji")
@@ -43,19 +45,20 @@ struct addNote: View {
             
             // create note item
             let note = Note(context: self.moc)
-            note.id = UUID() //create id
-            note.note = "\(message)" //input message
             
             // get current data and format it
-            let date = NSDate()
+            let date = Date()
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEEE, MMM d, yyyy h:mm a"
             let dateString = dateFormatter.string(from: date as Date)
             
             //assign vars on click
-            note.date = "\(dateString)"
-            note.emoji = "\(selected)"
-            note.stringLength = Double(message.count)
+            note.id = UUID() //create id
+            note.note = "\(message)" //input message
+            note.createdAt = date //actual date to sort
+            note.date = "\(dateString)" //formatted date to sort
+            note.emoji = "\(selected)" // emoji
+            note.stringLength = Double(message.count) // length of entry
             
             
             try? self.moc.save() //save inputted values

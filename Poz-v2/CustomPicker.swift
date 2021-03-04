@@ -1,15 +1,11 @@
-//
-//  CustomPicker.swift
-//  Poz-v2
-//
-//  Created by Kish Parikh on 3/3/21.
-//
-
 import SwiftUI
 
 struct CustomPicker : UIViewRepresentable {
     
+    //variable to hold selected value
     @Binding var selected : String
+    
+    //code and functionality adapted from Kavsoft: https://www.youtube.com/watch?v=uPFk2BuNT5M
     
     func makeCoordinator() -> CustomPicker.Coordinator {
         
@@ -43,23 +39,17 @@ struct CustomPicker : UIViewRepresentable {
             return 1
         }
         
-//        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//
-//            return emojies[row]
-//        }
-        
         func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
             
+            //set location and size of picker
             let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 100, height: 120))
-            
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
             
+            //format text
             label.text = emojies[row]
             label.textAlignment = .center
             label.font = .systemFont(ofSize: 100)
-            
-//            view.backgroundColor = .red
-            
+  
             view.addSubview(label)
             return view
         }
@@ -71,6 +61,7 @@ struct CustomPicker : UIViewRepresentable {
         
         func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
            
+            //height of picker
             return 120
         }
         
@@ -82,4 +73,5 @@ struct CustomPicker : UIViewRepresentable {
     }
 }
 
+//all emoji data
 var emojies = ["", "🤩", "🥳", "😎", "😍", "😇", "🥸", "🤯", "🤠", "😂", "😝", "🥲", "😏", "😊", "☺️", "😌", "🙃", "🙂", "😬", "😐", "😕", "🙁", "☹️", "😟", "😧", "🤒", "🥴", "😩", "😭", "😓", "🙄", "😳", "😵", "🤔", "🥱", "🤢", "😤", "🥵", "🤬"]

@@ -2,13 +2,12 @@ import SwiftUI
 
 struct ContentView: View {
     
+    //vars to control which screen/tab is showing
     @State var index = 0
-    @State private var isWelcomeScreensShowing = false;
-    @State private var isEnterNameScreenShowing = false;
+    @State private var isWelcomeScreensShowing = true; //enter name screen
+    @State private var isEnterNameScreenShowing = true; //enter name screen
 
     @State public var addNoteShowing = false;
-    
-    @State private var successMessage: Bool = false
     
     var body: some View {
         VStack {
@@ -29,15 +28,23 @@ struct ContentView: View {
                 
                 if (isEnterNameScreenShowing == true) {
                     EnterName()
-                    Button(action: {isEnterNameScreenShowing = false}) {
-                            Text("Next")
-                                .font(Font.custom("Poppins-Regular", size: 20))
-                                .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-                                .frame(width: 200, height: 50)
-                                .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
-                                .cornerRadius(50)
-                                .padding(.horizontal, 20)
-                                .padding(.bottom, 60)
+         
+                    ZStack {
+                        Button(action: {
+                            isEnterNameScreenShowing = false
+                        }) {
+                                Text("Next")
+                                    .font(Font.custom("Poppins-Regular", size: 20))
+                                    .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                                    .frame(width: 200, height: 50)
+                                    .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
+                                    .cornerRadius(50)
+                                    .padding(.horizontal, 20)
+                                    .padding(.bottom, 60)
+                        }
+                        Button (action: {isEnterNameScreenShowing = false}, label: {Text("Skip")})
+                            .offset(x: 150, y: -30)
+                        
                     }
                 } else {
                     if (self.index == 0) {
