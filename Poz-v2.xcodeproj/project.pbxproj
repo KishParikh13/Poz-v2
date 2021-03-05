@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE83291E25F1C3CD0001500F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83291D25F1C3CD0001500F /* Data.swift */; };
-		DE83291F25F1C3CD0001500F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83291D25F1C3CD0001500F /* Data.swift */; };
-		DE83292025F1C3CD0001500F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83291D25F1C3CD0001500F /* Data.swift */; };
-		DE83292525F1C7260001500F /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83292425F1C7260001500F /* QuoteView.swift */; };
-		DE83292625F1C7260001500F /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83292425F1C7260001500F /* QuoteView.swift */; };
-		DE83292725F1C7260001500F /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83292425F1C7260001500F /* QuoteView.swift */; };
 		DE95209325EF2B480035358F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209225EF2B480035358F /* AppDelegate.swift */; };
 		DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209425EF2B480035358F /* SceneDelegate.swift */; };
 		DE95209725EF2B480035358F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209625EF2B480035358F /* ContentView.swift */; };
@@ -84,8 +78,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DE83291D25F1C3CD0001500F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		DE83292425F1C7260001500F /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		DE95208F25EF2B480035358F /* Poz-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poz-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE95209225EF2B480035358F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE95209425EF2B480035358F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,8 +158,6 @@
 				DE95209225EF2B480035358F /* AppDelegate.swift */,
 				DE95209425EF2B480035358F /* SceneDelegate.swift */,
 				DE95209625EF2B480035358F /* ContentView.swift */,
-				DE83291D25F1C3CD0001500F /* Data.swift */,
-				DE83292425F1C7260001500F /* QuoteView.swift */,
 				DE9520FB25EF54680035358F /* TopTabMenu.swift */,
 				DE9520F425EF53D50035358F /* EnterName.swift */,
 				DE9520DF25EF531F0035358F /* Onboarding.swift */,
@@ -356,8 +346,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE83291E25F1C3CD0001500F /* Data.swift in Sources */,
-				DE83292525F1C7260001500F /* QuoteView.swift in Sources */,
 				DE95218E25F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DE95211425EF82000035358F /* addNote.swift in Sources */,
 				DE95211E25EFF6C70035358F /* Stats.swift in Sources */,
@@ -380,8 +368,6 @@
 			files = (
 				DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */,
 				DE95212425F0026A0035358F /* ContentView.swift in Sources */,
-				DE83291F25F1C3CD0001500F /* Data.swift in Sources */,
-				DE83292625F1C7260001500F /* QuoteView.swift in Sources */,
 				DE95211F25EFF6C70035358F /* Stats.swift in Sources */,
 				DE95218F25F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DE9520D025EF2D5D0035358F /* NotesList.swift in Sources */,
@@ -403,8 +389,6 @@
 			files = (
 				DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */,
 				DE95212825F0026A0035358F /* ContentView.swift in Sources */,
-				DE83292025F1C3CD0001500F /* Data.swift in Sources */,
-				DE83292725F1C7260001500F /* QuoteView.swift in Sources */,
 				DE95212025EFF6C70035358F /* Stats.swift in Sources */,
 				DE95219025F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DE9520D125EF2D5D0035358F /* NotesList.swift in Sources */,

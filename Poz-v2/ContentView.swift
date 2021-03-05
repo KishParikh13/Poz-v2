@@ -10,8 +10,8 @@ struct ContentView: View {
     
     //vars to control which screen/tab is showing
     @State var index = 0
-    @State private var isWelcomeScreensShowing = true; //enter name screen
-    @State private var isEnterNameScreenShowing = true; //enter name screen
+    @State private var isWelcomeScreensShowing = false; //enter name screen
+    @State private var isEnterNameScreenShowing = false; //enter name screen
 
     @State public var addNoteShowing = false;
     
@@ -32,7 +32,7 @@ struct ContentView: View {
                             .padding(.bottom, 60)
                     }
 
-            } else {
+            } else { //Onoarding Screen
                 
                 if (isEnterNameScreenShowing == true) {
                     EnterName().environmentObject(user)
@@ -55,9 +55,11 @@ struct ContentView: View {
                         
                     }
                     
-                } else {
+                } else { // Enter name screen
                     
                     if (self.index == 0) {
+                        
+                        
                         VStack {
                             Spacer()
                             
@@ -75,7 +77,8 @@ struct ContentView: View {
 
                     if (self.index == 2) {
                         Dashboard()
-                    }
+                    } //Dashboard Tab
+                    
             bottomTabs(index: self.$index)
         }
     }
