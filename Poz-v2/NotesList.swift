@@ -28,6 +28,8 @@ struct NotesList: View {
                 }
                 .onDelete(perform: removeItem) //delete command
             }
+            .padding(.top, -8)
+            .padding(.bottom, -8)
         }
     }
     

@@ -37,8 +37,13 @@ struct userNameOutput: View {
     @EnvironmentObject var user: User
     
     var body: some View {
-        Text("Hey, " + user.name)
-            .padding()
+        if ((user.name == "")) {
+            Text("Hey, you")
+                .padding()
+        } else {
+            Text("Hey, " + user.name)
+                .padding()
+        }
     }
 }
 
@@ -51,8 +56,8 @@ struct EnterName_Text: View {
             .font(Font.custom("Blueberry Regular", size: 40))
             .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
             .padding(.top, 75)
-        Text("(Optional) - but why not!")
-            .font(Font.custom("Poppins-Regular", size: 16))
-            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+//        Text("(Optional) - but why not!")
+//            .font(Font.custom("Poppins-Regular", size: 16))
+//            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
     }
 }

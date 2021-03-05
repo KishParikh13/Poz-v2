@@ -54,7 +54,9 @@ struct ContentView: View {
                             .offset(x: 150, y: -30)
                         
                     }
+                    
                 } else {
+                    
                     if (self.index == 0) {
                         VStack {
                             Spacer()
@@ -70,6 +72,7 @@ struct ContentView: View {
                             Spacer()
                         }
                     }
+
                     if (self.index == 2) {
                         Dashboard()
                     }
