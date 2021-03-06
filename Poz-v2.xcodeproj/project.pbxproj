@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE51212325F344F600AF5320 /* NoteScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51212225F344F600AF5320 /* NoteScroller.swift */; };
+		DE51212B25F34F4600AF5320 /* BreatheScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51212A25F34F4600AF5320 /* BreatheScroller.swift */; };
 		DE95209325EF2B480035358F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209225EF2B480035358F /* AppDelegate.swift */; };
 		DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209425EF2B480035358F /* SceneDelegate.swift */; };
 		DE95209725EF2B480035358F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209625EF2B480035358F /* ContentView.swift */; };
@@ -78,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE51212225F344F600AF5320 /* NoteScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteScroller.swift; sourceTree = "<group>"; };
+		DE51212A25F34F4600AF5320 /* BreatheScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheScroller.swift; sourceTree = "<group>"; };
 		DE95208F25EF2B480035358F /* Poz-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poz-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE95209225EF2B480035358F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE95209425EF2B480035358F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				DE95209225EF2B480035358F /* AppDelegate.swift */,
 				DE95209425EF2B480035358F /* SceneDelegate.swift */,
 				DE95209625EF2B480035358F /* ContentView.swift */,
+				DE51212225F344F600AF5320 /* NoteScroller.swift */,
+				DE51212A25F34F4600AF5320 /* BreatheScroller.swift */,
 				DE9520FB25EF54680035358F /* TopTabMenu.swift */,
 				DE9520F425EF53D50035358F /* EnterName.swift */,
 				DE9520DF25EF531F0035358F /* Onboarding.swift */,
@@ -347,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE95218E25F16AB80035358F /* Poz.xcdatamodeld in Sources */,
+				DE51212B25F34F4600AF5320 /* BreatheScroller.swift in Sources */,
 				DE95211425EF82000035358F /* addNote.swift in Sources */,
 				DE95211E25EFF6C70035358F /* Stats.swift in Sources */,
 				DE9520CF25EF2D5D0035358F /* NotesList.swift in Sources */,
@@ -357,6 +364,7 @@
 				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
 				DE9520D625EF508E0035358F /* BottomTabsMenu.swift in Sources */,
 				DE9520E025EF531F0035358F /* Onboarding.swift in Sources */,
+				DE51212325F344F600AF5320 /* NoteScroller.swift in Sources */,
 				DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */,
 				DE95209725EF2B480035358F /* ContentView.swift in Sources */,
 			);

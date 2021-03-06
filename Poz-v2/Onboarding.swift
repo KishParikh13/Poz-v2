@@ -23,17 +23,9 @@ struct OnboardOne: View {
             
             
             // big image
-            Image1()
+            HeroImage()
             .padding(.top, -60)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
-            // nav button to next screen
-            
-            //testing bottom navigation
-//            .tabItem {
-//                    Image(systemName: "phone.fill")
-//                    Text("First Tab")
-//                  }
             
         }
         .navigationBarBackButtonHidden(true)
@@ -61,7 +53,7 @@ struct Welcome_Text: View {
 }
 
 //home screen image // Illustration by Freepik Storyset
-struct Image1: View {
+struct HeroImage: View {
     var body: some View {
         ZStack {
             Image("Alone-cuate").resizable()

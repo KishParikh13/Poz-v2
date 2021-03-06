@@ -10,10 +10,12 @@ struct ContentView: View {
     
     //vars to control which screen/tab is showing
     @State var index = 0
-    @State private var isWelcomeScreensShowing = false; //enter name screen
-    @State private var isEnterNameScreenShowing = false; //enter name screen
+    @State private var isWelcomeScreensShowing = true; // onboard screen switch
+    @State private var isEnterNameScreenShowing = true; // enter name screen switch
 
     @State public var addNoteShowing = false;
+    
+    @State public var x = 1
     
     let user = User()
     
@@ -61,15 +63,12 @@ struct ContentView: View {
                         
                         
                         VStack {
-                            Spacer()
-                            
                             userNameOutput().environmentObject(user)
+                                .padding(.bottom, 20)
                             
-                            Button(action: {
-                                    addNoteShowing.toggle() }, label: {Text("Add Note")})
-                                .sheet(isPresented: $addNoteShowing, content: {
-                                    addNote()
-                                })
+                            JournalTypes(x: self.x)
+                            
+                            BreatheScroller()
                             
                             Spacer()
                         }
