@@ -39,13 +39,13 @@ struct userNameOutput: View {
     var body: some View {
         if ((user.name == "")) {
             Text("Hey, you")
-                .font(Font.custom("Blueberry", size: 48))
+                .font(Font.custom("Blueberry", size: 32))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 0)
                 .padding(.leading, 16)
         } else {
             Text("Hey, " + user.name)
-                .font(Font.custom("Blueberry", size: 48))
+                .font(Font.custom("Blueberry", size: 32))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 0)
                 .padding(.leading, 16)

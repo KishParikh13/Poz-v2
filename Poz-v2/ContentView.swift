@@ -63,14 +63,19 @@ struct ContentView: View {
                         
                         
                         VStack {
-                            userNameOutput().environmentObject(user)
-                                .padding(.bottom, 20)
-                            
-                            JournalTypes(x: self.x)
-                            
-                            BreatheScroller()
-                            
-                            Spacer()
+                            ScrollView(.vertical) {
+                                userNameOutput().environmentObject(user)
+                                    .padding(.bottom, 30)
+                                
+                                QuoteBlock()
+                                    .padding(.bottom, 30)
+                                
+                                JournalTypes(x: self.x)
+                                    .padding(.bottom, 30)
+                                
+                                BreatheScroller()
+
+                            }
                         }
                     }
 

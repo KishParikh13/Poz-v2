@@ -2,11 +2,11 @@ import SwiftUI
 
 struct JournalTypes: View {
     let types: [Journal] = [
-        Journal(name: "Note", emoji: "😳", color: Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)), x: 0),
-        Journal(name: "Gratitude", emoji: "🥴", color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)), x: 1),
-        Journal(name: "To Do", emoji: "😧", color: Color(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)), x: 2),
-        Journal(name: "Reminder", emoji: "😭", color: Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)), x: 3),
-        Journal(name: "Memory", emoji: "🤬", color: Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)), x: 4)]
+        Journal(name: "Note", emoji: "😳", color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)), x: 0),
+        Journal(name: "Gratitude", emoji: "🥴", color: Color(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)), x: 1),
+        Journal(name: "To Do", emoji: "😧", color: Color(#colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)), x: 2),
+        Journal(name: "Reminder", emoji: "😭", color: Color(#colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)), x: 3),
+        Journal(name: "Memory", emoji: "🤬", color: Color(#colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)), x: 4)]
     
     @State public var addNoteShowing = false
     @State public var x: Int
