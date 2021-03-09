@@ -21,7 +21,7 @@ struct BreatheScroller: View {
             Text ("Breathe")
                 .font(Font.custom("Poppins-Regular", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.bottom, 0)
+                .padding(.bottom, -3)
                 .padding(.leading, 16)
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack (spacing: 16) {
@@ -36,7 +36,7 @@ struct BreatheScroller: View {
                         .padding(.bottom, 20)
                         .padding(.horizontal, 40)
                         .foregroundColor(.white)
-                        .background(BreathingExercise.color)
+                        .background(LinearGradient(gradient: Gradient(colors: [BreathingExercise.color, Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1))]), startPoint: .bottomTrailing, endPoint: .topLeading))
                         .cornerRadius(10.0)
                     }
                 }

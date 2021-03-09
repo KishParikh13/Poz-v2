@@ -6,10 +6,12 @@ struct NotesList: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Note.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Note.createdAt, ascending: false)]) var notes: FetchedResults<Note>
     
+    @State public var addNoteShowing = false
+    
     var body: some View {
         
         //list of all notes
-        VStack {
+        ZStack {
             List {
                 ForEach (notes, id: \.id) { notes in
                     HStack (alignment: .top) {
@@ -30,6 +32,21 @@ struct NotesList: View {
             }
             .padding(.top, -8)
             .padding(.bottom, -8)
+            
+            
+            Button(action: { addNoteShowing.toggle() }) {
+                ZStack{
+                    Circle()
+                        .frame(width: 60, height: 60)
+                        .foregroundColor(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
+                    Image(systemName: "plus")
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
+                }
+            }
+            .offset(x: (UIScreen.main.bounds.width/2 - 50), y: (UIScreen.main.bounds.height/2 - 150))
+            .sheet(isPresented: $addNoteShowing, content: { addNote() })
+            
         }
     }
     

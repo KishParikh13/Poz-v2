@@ -38,16 +38,24 @@ struct userNameOutput: View {
     
     var body: some View {
         if ((user.name == "")) {
-            Text("Hey, you")
-                .font(Font.custom("Blueberry", size: 32))
+            Text("""
+                Good morning,
+                you
+                """)
+                .font(Font.custom("Poppins", size: 32))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 0)
+                .padding(.top, 15)
                 .padding(.leading, 16)
         } else {
-            Text("Hey, " + user.name)
-                .font(Font.custom("Blueberry", size: 32))
+            Text(
+                """
+                Good Morning,
+                """ + user.name)
+                .font(Font.custom("Poppins", size: 32))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 0)
+                .padding(.top, 15)
                 .padding(.leading, 16)
         }
     }
@@ -59,7 +67,7 @@ struct EnterName_Text: View {
     var body: some View {
         Spacer()
         Text("Enter Your Name")
-            .font(Font.custom("Blueberry Regular", size: 40))
+            .font(Font.custom("Poppins", size: 40))
             .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
             .padding(.top, 75)
     }

@@ -12,6 +12,7 @@ struct addNote: View {
     @Environment(\.presentationMode) var presentationMode //check if pop up active
     
     @State var selected = ""
+    @State private var selectedIndex: Int = 0
     
     //content
     var body: some View {
@@ -34,11 +35,11 @@ struct addNote: View {
         .padding(.horizontal, 40)
         
         //emoji picker
-        Text("Scroll below to add emoji")
-            .padding(.top, 30)
-            .foregroundColor(.gray)
+//        Text("Scroll below to add emoji" + "\(selected)")
+//            .padding(.top, 30)
+//            .foregroundColor(.gray)
         
-        CustomPicker(selected: self.$selected)
+        EmojiPicker(selectedIndex: $selectedIndex, selected: self.$selected)
         
         //submit button
         Button("Submit") {
@@ -49,7 +50,7 @@ struct addNote: View {
             // get current data and format it
             let date = Date()
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "EEEE, MMM d, yyyy h:mm a"
+            dateFormatter.dateFormat = "M/d/yy h:mm a"
             let dateString = dateFormatter.string(from: date as Date)
             
             //assign vars on click

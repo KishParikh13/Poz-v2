@@ -41,7 +41,7 @@ struct Welcome_Text: View {
     var body: some View {
     //    Spacer()
         Text("Welcome to Poz")
-            .font(Font.custom("Blueberry Regular", size: 48))
+            .font(Font.custom("Poppins", size: 48))
             .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
             .padding(.top, 80)
             .padding(.bottom, 2)

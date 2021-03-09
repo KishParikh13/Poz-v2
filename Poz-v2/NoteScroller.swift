@@ -16,7 +16,7 @@ struct JournalTypes: View {
             Text ("Journal")
                 .font(Font.custom("Poppins-Regular", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.bottom, 0)
+                .padding(.bottom, -3)
                 .padding(.leading, 16)
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack (spacing: 16) {
@@ -32,7 +32,8 @@ struct JournalTypes: View {
                             .padding(.bottom, 20)
                             .padding(.horizontal, 40)
                             .foregroundColor(.white)
-                            .background(Journal.color)
+//                            .background(Journal.color)
+                            .background(LinearGradient(gradient: Gradient(colors: [Journal.color, Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1))]), startPoint: .bottomTrailing, endPoint: .topLeading))
                             .cornerRadius(10.0)
                         })
                         .sheet(isPresented: $addNoteShowing, content: { addNote() })

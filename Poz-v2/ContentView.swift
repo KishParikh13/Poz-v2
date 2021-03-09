@@ -38,6 +38,7 @@ struct ContentView: View {
                 
                 if (isEnterNameScreenShowing == true) {
                     EnterName().environmentObject(user)
+                        .padding(.top, 20)
          
                     ZStack {
                         Button(action: {
@@ -77,11 +78,14 @@ struct ContentView: View {
 
                             }
                         }
+                        .padding(.top, -8)
+                        .padding(.bottom, -8)
                     }
 
                     if (self.index == 2) {
                         Dashboard()
                     } //Dashboard Tab
+                    
                     
             bottomTabs(index: self.$index)
         }
