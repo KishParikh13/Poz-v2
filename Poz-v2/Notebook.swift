@@ -52,23 +52,23 @@ struct Notebook: View {
                 }
                 .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9884551167, green: 1, blue: 0.9494463801, alpha: 1)))
                 .ignoresSafeArea(edges: .all)
-
-                //addnote button
-                Button(action: {
-                    addNoteShowing.toggle()
-                    indexH = 1
-                }) {
-                    ZStack{
-                        Circle()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
-                        Image(systemName: "plus")
-                        .foregroundColor(.black)
-                    }
-                }
-                .offset(x: 0, y: (UIScreen.main.bounds.height/2 - 150))
-        //        .sheet(isPresented: $addNoteShowing, content: { addNote() })
-                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.09803921569)), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                
+//                //addnote button
+//                Button(action: {
+//                    addNoteShowing.toggle()
+//                    indexH = 1
+//                }) {
+//                    ZStack{
+//                        Circle()
+//                            .frame(width: 60, height: 60)
+//                            .foregroundColor(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
+//                        Image(systemName: "plus")
+//                        .foregroundColor(.black)
+//                    }
+//                }
+//                .offset(x: 0, y: (UIScreen.main.bounds.height/2 - 150))
+//        //        .sheet(isPresented: $addNoteShowing, content: { addNote() })
+//                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.09803921569)), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             }
             
             

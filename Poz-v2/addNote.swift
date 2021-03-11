@@ -1,4 +1,7 @@
 import SwiftUI
+import Combine
+import Speech
+import SwiftSpeech
 
 struct addNote: View {
     
@@ -13,6 +16,26 @@ struct addNote: View {
     
     @State var selected = ""
     @State private var selectedIndex: Int = 0
+    
+    
+    //audio to text
+    
+    
+    var sessionConfiguration: SwiftSpeech.Session.Configuration
+    
+    public init(sessionConfiguration: SwiftSpeech.Session.Configuration) {
+        self.sessionConfiguration = sessionConfiguration
+    }
+    
+    public init(locale: Locale = .current) {
+        self.init(sessionConfiguration: SwiftSpeech.Session.Configuration(locale: locale))
+    }
+    
+    public init(localeIdentifier: String) {
+        self.init(locale: Locale(identifier: localeIdentifier))
+    }
+    
+    
     
     //content
     var body: some View {
@@ -38,7 +61,18 @@ struct addNote: View {
 //            .padding(.top, 30)
 //            .foregroundColor(.gray)
         
-        EmojiPicker(selectedIndex: $selectedIndex, selected: self.$selected)
+        
+        
+        //EmojiPicker(selectedIndex: $selectedIndex, selected: self.$selected)
+        
+        VStack(spacing: 35.0) {
+            SwiftSpeech.RecordButton()
+                .swiftSpeechToggleRecordingOnTap(sessionConfiguration: sessionConfiguration, animation: .spring(response: 0.3, dampingFraction: 0.5, blendDuration: 0))
+                .onRecognizeLatest(update: $message)
+            
+        }.onAppear {
+            SwiftSpeech.requestSpeechRecognitionAuthorization()
+        }
         
         //submit button
         Button("Submit") {
