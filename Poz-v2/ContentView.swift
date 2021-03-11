@@ -25,7 +25,7 @@ struct ContentView: View {
     
     let user = User()
     
-    
+    @State var indexH: Int = 1
     
     var body: some View {
         
@@ -130,7 +130,7 @@ struct ContentView: View {
 //
 //                            }
                             
-                            Notebook()
+                            Notebook(indexH: self.indexH)
                     
                         }
                         .padding(.top, -8)

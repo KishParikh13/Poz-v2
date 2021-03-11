@@ -16,23 +16,22 @@ struct addNote: View {
     
     //content
     var body: some View {
+//
+//        Capsule()
+//            .frame(width: 100, height: 8)
+//            .padding(.top, 10)
+//            .foregroundColor(.gray)
         
-        Capsule()
-            .frame(width: 100, height: 8)
-            .padding(.top, 10)
-            .foregroundColor(.gray)
-        
-        Text((message == "" ? "Type your thoughts" : "Click Submit to Save"))
-            .padding(.top, 30)
-            .foregroundColor(.gray)
+        Spacer()
         
         //text input
         ZStack {
-            TextEditor(text: self.$message)
-            Text("Text").opacity(0).padding(.all, 8)
+            TextField("What's on your mind?", text: self.$message)
         }
         .padding(.top, 20)
         .padding(.horizontal, 40)
+        
+        Spacer()
         
         //emoji picker
 //        Text("Scroll below to add emoji" + "\(selected)")
@@ -77,6 +76,6 @@ struct addNote: View {
         .background(message == "" ? Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) : Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
         .cornerRadius(50)
         .padding(.horizontal, 20)
-        .padding(.bottom, 20)
+        .padding(.bottom, 60)
     }
 }
