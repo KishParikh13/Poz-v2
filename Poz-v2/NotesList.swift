@@ -34,6 +34,7 @@ struct NotesList: View {
             .padding(.bottom, -8)
             
             
+            //addnote button
             Button(action: { addNoteShowing.toggle() }) {
                 ZStack{
                     Circle()
@@ -46,6 +47,7 @@ struct NotesList: View {
             }
             .offset(x: (UIScreen.main.bounds.width/2 - 50), y: (UIScreen.main.bounds.height/2 - 150))
             .sheet(isPresented: $addNoteShowing, content: { addNote() })
+            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1490374432)), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             
         }
     }

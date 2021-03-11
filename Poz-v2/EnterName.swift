@@ -4,7 +4,6 @@ struct EnterName: View {
     
     @EnvironmentObject var user: User
     
-//    @State public var name: String = ""
     @State public var isEditing = false
     
     var body: some View {
@@ -42,7 +41,7 @@ struct userNameOutput: View {
                 Good morning,
                 you
                 """)
-                .font(Font.custom("Poppins", size: 32))
+                .font(Font.custom("Blueberry", size: 32))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 0)
                 .padding(.top, 15)
@@ -52,7 +51,7 @@ struct userNameOutput: View {
                 """
                 Good Morning,
                 """ + user.name)
-                .font(Font.custom("Poppins", size: 32))
+                .font(Font.custom("Blueberry", size: 32))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 0)
                 .padding(.top, 15)
@@ -65,10 +64,14 @@ struct userNameOutput: View {
 // heading text
 struct EnterName_Text: View {
     var body: some View {
-        Spacer()
         Text("Enter Your Name")
-            .font(Font.custom("Poppins", size: 40))
+            .font(Font.custom("Blueberry", size: 40))
             .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-            .padding(.top, 75)
+            .padding(.top, 20)
+            .padding(.bottom, 2)
+        Text("For a personal touch")
+            .font(Font.custom("Poppins-Regular", size: 20))
+            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+        Spacer()
     }
 }

@@ -61,12 +61,17 @@
 		DE95218E25F16AB80035358F /* Poz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE95218C25F16AB80035358F /* Poz.xcdatamodeld */; };
 		DE95218F25F16AB80035358F /* Poz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE95218C25F16AB80035358F /* Poz.xcdatamodeld */; };
 		DE95219025F16AB80035358F /* Poz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE95218C25F16AB80035358F /* Poz.xcdatamodeld */; };
+		DECA2B4B25F957E10058F458 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA2B4A25F957E10058F458 /* Authentication.swift */; };
 		DEFE954D25F6856300AE5BF5 /* HorizontalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */; };
 		DEFE954E25F6856300AE5BF5 /* HorizontalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */; };
 		DEFE954F25F6856300AE5BF5 /* HorizontalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */; };
 		DEFE955425F6897800AE5BF5 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */; };
 		DEFE955525F6897800AE5BF5 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */; };
 		DEFE955625F6897800AE5BF5 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */; };
+		DEFF2E6A25F9F6F9005597B2 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF2E6925F9F6F9005597B2 /* Notebook.swift */; };
+		DEFF2E6B25F9F6F9005597B2 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF2E6925F9F6F9005597B2 /* Notebook.swift */; };
+		DEFF2E6C25F9F6F9005597B2 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF2E6925F9F6F9005597B2 /* Notebook.swift */; };
+		DEFF2E7225F9F741005597B2 /* Pages in Frameworks */ = {isa = PBXBuildFile; productRef = DEFF2E7125F9F741005597B2 /* Pages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,8 +121,11 @@
 		DE95211D25EFF6C70035358F /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		DE95215025F09B800035358F /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		DE95218D25F16AB80035358F /* Poz_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Poz_v2.xcdatamodel; sourceTree = "<group>"; };
+		DECA2B4A25F957E10058F458 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPicker.swift; sourceTree = "<group>"; };
 		DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
+		DEFF2E6925F9F6F9005597B2 /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
+		DEFF2E7625F9FD72005597B2 /* Pages */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Pages; path = ../Pages; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE95214C25F00BA40035358F /* SwiftUICharts in Frameworks */,
+				DEFF2E7225F9F741005597B2 /* Pages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +162,7 @@
 				DE9520AB25EF2B490035358F /* Poz-v2Tests */,
 				DE9520B625EF2B490035358F /* Poz-v2UITests */,
 				DE95209025EF2B480035358F /* Products */,
+				DEFF2E7625F9FD72005597B2 /* Pages */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,11 +192,13 @@
 				DE95211D25EFF6C70035358F /* Stats.swift */,
 				DE9520CE25EF2D5D0035358F /* NotesList.swift */,
 				DE95211325EF82000035358F /* addNote.swift */,
+				DECA2B4A25F957E10058F458 /* Authentication.swift */,
 				DE95215025F09B800035358F /* CustomPicker.swift */,
 				DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */,
 				DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */,
 				DE9520D525EF508E0035358F /* BottomTabsMenu.swift */,
 				DE95209B25EF2B480035358F /* Assets.xcassets */,
+				DEFF2E6925F9F6F9005597B2 /* Notebook.swift */,
 				DE9520A025EF2B480035358F /* LaunchScreen.storyboard */,
 				DE9520A325EF2B480035358F /* Info.plist */,
 				DE9520E725EF53400035358F /* Blueberry Regular.otf */,
@@ -241,6 +253,7 @@
 			name = "Poz-v2";
 			packageProductDependencies = (
 				DE95214B25F00BA40035358F /* SwiftUICharts */,
+				DEFF2E7125F9F741005597B2 /* Pages */,
 			);
 			productName = "Poz-v2";
 			productReference = DE95208F25EF2B480035358F /* Poz-v2.app */;
@@ -315,6 +328,7 @@
 			mainGroup = DE95208625EF2B480035358F;
 			packageReferences = (
 				DE95214A25F00BA40035358F /* XCRemoteSwiftPackageReference "ChartView" */,
+				DEFF2E7025F9F741005597B2 /* XCRemoteSwiftPackageReference "Pages" */,
 			);
 			productRefGroup = DE95209025EF2B480035358F /* Products */;
 			projectDirPath = "";
@@ -378,6 +392,8 @@
 				DE9520F525EF53D50035358F /* EnterName.swift in Sources */,
 				DE9520FC25EF54680035358F /* TopTabMenu.swift in Sources */,
 				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
+				DECA2B4B25F957E10058F458 /* Authentication.swift in Sources */,
+				DEFF2E6A25F9F6F9005597B2 /* Notebook.swift in Sources */,
 				DE9520D625EF508E0035358F /* BottomTabsMenu.swift in Sources */,
 				DE9520E025EF531F0035358F /* Onboarding.swift in Sources */,
 				DE51212325F344F600AF5320 /* NoteScroller.swift in Sources */,
@@ -393,6 +409,7 @@
 				DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */,
 				DE95212425F0026A0035358F /* ContentView.swift in Sources */,
 				DE95211F25EFF6C70035358F /* Stats.swift in Sources */,
+				DEFF2E6B25F9F6F9005597B2 /* Notebook.swift in Sources */,
 				DE95218F25F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DE9520D025EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FD25EF54680035358F /* TopTabMenu.swift in Sources */,
@@ -416,6 +433,7 @@
 				DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */,
 				DE95212825F0026A0035358F /* ContentView.swift in Sources */,
 				DE95212025EFF6C70035358F /* Stats.swift in Sources */,
+				DEFF2E6C25F9F6F9005597B2 /* Notebook.swift in Sources */,
 				DE95219025F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DE9520D125EF2D5D0035358F /* NotesList.swift in Sources */,
 				DE9520FE25EF54680035358F /* TopTabMenu.swift in Sources */,
@@ -582,6 +600,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Poz-v2/Preview Content\"";
+				DEVELOPMENT_TEAM = GN3TH9WD6W;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Poz-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +621,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Poz-v2/Preview Content\"";
+				DEVELOPMENT_TEAM = GN3TH9WD6W;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Poz-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -745,6 +765,14 @@
 				minimumVersion = 1.5.4;
 			};
 		};
+		DEFF2E7025F9F741005597B2 /* XCRemoteSwiftPackageReference "Pages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nachonavarro/Pages";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -752,6 +780,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DE95214A25F00BA40035358F /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
+		};
+		DEFF2E7125F9F741005597B2 /* Pages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEFF2E7025F9F741005597B2 /* XCRemoteSwiftPackageReference "Pages" */;
+			productName = Pages;
 		};
 /* End XCSwiftPackageProductDependency section */
 

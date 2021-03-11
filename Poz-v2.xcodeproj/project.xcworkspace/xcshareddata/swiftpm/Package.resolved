@@ -9,6 +9,15 @@
           "revision": "4699847a9ac0c694666cea3acef133498952566e",
           "version": "1.5.4"
         }
+      },
+      {
+        "package": "Pages",
+        "repositoryURL": "https://github.com/nachonavarro/Pages",
+        "state": {
+          "branch": null,
+          "revision": "4cdbe4ff2f9ddbfda8cf0376a2acb678a1a0a0a2",
+          "version": "0.1.5"
+        }
       }
     ]
   },
