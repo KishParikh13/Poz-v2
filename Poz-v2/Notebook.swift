@@ -44,9 +44,10 @@ struct Notebook: View {
                                 .font(.system(size: 48))
                             Text(notes.note ?? "Could not load note")
                                 .font(.system(size: 20))
-                            }
+                        }
+                        .padding()
                     }
-                    .padding()
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                     .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9884551167, green: 1, blue: 0.9494463801, alpha: 1)))
                     .ignoresSafeArea(edges: .all)
                 }
@@ -126,16 +127,3 @@ struct Buttons: View {
 //
 //    }
 //}
-
-
-
-
-//                Image(systemName: "book.closed").resizable().frame(width: 20, height: 20)
-//                Image(systemName: "mic")
-
-//                Image(systemName: "star")
-
-//                Image(systemName: "video")
-//                Image(systemName: "camera")
-
-//                Image(systemName: "plus")
