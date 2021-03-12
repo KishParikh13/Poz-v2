@@ -1,7 +1,6 @@
 import SwiftUI
-import Combine
-import Speech
 import SwiftSpeech
+import PhotoLibraryPicker
 
 struct addNote: View {
     
@@ -24,6 +23,7 @@ struct addNote: View {
     var sessionConfiguration: SwiftSpeech.Session.Configuration
     
     public init(sessionConfiguration: SwiftSpeech.Session.Configuration) {
+        UITextView.appearance().backgroundColor = .clear
         self.sessionConfiguration = sessionConfiguration
     }
     
@@ -35,36 +35,59 @@ struct addNote: View {
         self.init(locale: Locale(identifier: localeIdentifier))
     }
     
-    @State private var buttonIndex: Int = 0;
+    
+    
     @State private var emojiPickerShowing: Bool = false;
     @State private var addPhotoShowing: Bool = false;
     @State private var addSpecialShowing: Bool = false;
+
     
-    //content
+    @State var pictures = [Picture]()
+
+    
     var body: some View {
-//
-//        Capsule()
-//            .frame(width: 100, height: 8)
-//            .padding(.top, 10)
-//            .foregroundColor(.gray)
         
-        Text("Today")
-            .font(.system(size: 16, weight: .bold))
-            .padding(.top, 68)
+        //today
+        HStack {
+            Spacer()
+            Text("Today")
+                .font(.system(size: 16, weight: .bold))
+            Spacer()
+        }
+        .padding(.top, 16)
+        .padding(.horizontal, 20)
         
+        //emoji putput
         Text("\(selected)")
             .font(.system(size: 48))
-            
         
         //text input
-        ZStack {
-            TextField("What's on your mind?", text: self.$message)
+        ZStack (alignment: .topLeading) {
+            if message.isEmpty {
+                Text("What's on your mind?")
+                    .foregroundColor(.gray)
+                    .padding(.top, 8)
+                    .padding(.leading, 7)
+            }
+            
+            TextEditor(text: self.$message)
+                .background(Color.clear)
         }
         .padding(.top, -10)
-        .padding(.horizontal, 40)
+        .padding(.horizontal, 20)
+        
+        List {
+            ForEach(pictures) { picture in
+                picture.toImage() // You can fix the size by default width: 100, height: 100
+            }
+        }
+        .background(Color.clear)
+         
         
         Spacer()
 
+        //bottom buttons
+        
         if (emojiPickerShowing == true) {
             Text("Scroll below to tag entry with emoji")
                 .padding(.top, 30)
@@ -112,6 +135,7 @@ struct addNote: View {
             .scaleEffect((addPhotoShowing ? 1.76 : 1))
             .animation(.easeOut(duration: 0.2))
             .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1490374432)), radius: 5)
+            .sheet(isPresented: $addPhotoShowing, content: { PhotoLibraryPicker(self.$pictures) })
             
             //sparkles button
             Button(action: { addSpecialShowing.toggle() }) {
@@ -128,7 +152,6 @@ struct addNote: View {
             .scaleEffect((addSpecialShowing ? 1.76 : 1))
             .animation(.easeOut(duration: 0.2))
             .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1490374432)), radius: 5)
-            //            .sheet(isPresented: $addNoteShowing, content: { addNote() })
             
             
             

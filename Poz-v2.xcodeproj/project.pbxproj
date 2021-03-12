@@ -39,6 +39,9 @@
 		DE95219025F16AB80035358F /* Poz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE95218C25F16AB80035358F /* Poz.xcdatamodeld */; };
 		DECA2B4B25F957E10058F458 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA2B4A25F957E10058F458 /* Authentication.swift */; };
 		DED501D325FABD56008FBD91 /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = DED501D225FABD56008FBD91 /* SwiftSpeech */; };
+		DED501D825FB4B9D008FBD91 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED501D725FB4B9D008FBD91 /* TextField.swift */; };
+		DED501DD25FBABFD008FBD91 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED501DC25FBABFD008FBD91 /* Menu.swift */; };
+		DED501E325FBEDE0008FBD91 /* PhotoLibraryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = DED501E225FBEDE0008FBD91 /* PhotoLibraryPicker */; };
 		DEFE954D25F6856300AE5BF5 /* HorizontalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */; };
 		DEFE955425F6897800AE5BF5 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */; };
 		DEFF2E6A25F9F6F9005597B2 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF2E6925F9F6F9005597B2 /* Notebook.swift */; };
@@ -132,6 +135,8 @@
 		DE95215025F09B800035358F /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		DE95218D25F16AB80035358F /* Poz_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Poz_v2.xcdatamodel; sourceTree = "<group>"; };
 		DECA2B4A25F957E10058F458 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		DED501D725FB4B9D008FBD91 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		DED501DC25FBABFD008FBD91 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPicker.swift; sourceTree = "<group>"; };
 		DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
 		DEFF2E6925F9F6F9005597B2 /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 				DE95214C25F00BA40035358F /* SwiftUICharts in Frameworks */,
 				DED501D325FABD56008FBD91 /* SwiftSpeech in Frameworks */,
 				DEFF2E7225F9F741005597B2 /* Pages in Frameworks */,
+				DED501E325FBEDE0008FBD91 /* PhotoLibraryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +210,8 @@
 				DE95211D25EFF6C70035358F /* Stats.swift */,
 				DE9520CE25EF2D5D0035358F /* NotesList.swift */,
 				DE95211325EF82000035358F /* addNote.swift */,
+				DED501DC25FBABFD008FBD91 /* Menu.swift */,
+				DED501D725FB4B9D008FBD91 /* TextField.swift */,
 				DEFF2FB125FA9546005597B2 /* audioRecord.swift */,
 				DECA2B4A25F957E10058F458 /* Authentication.swift */,
 				DE95215025F09B800035358F /* CustomPicker.swift */,
@@ -268,6 +276,7 @@
 				DE95214B25F00BA40035358F /* SwiftUICharts */,
 				DEFF2E7125F9F741005597B2 /* Pages */,
 				DED501D225FABD56008FBD91 /* SwiftSpeech */,
+				DED501E225FBEDE0008FBD91 /* PhotoLibraryPicker */,
 			);
 			productName = "Poz-v2";
 			productReference = DE95208F25EF2B480035358F /* Poz-v2.app */;
@@ -344,6 +353,7 @@
 				DE95214A25F00BA40035358F /* XCRemoteSwiftPackageReference "ChartView" */,
 				DEFF2E7025F9F741005597B2 /* XCRemoteSwiftPackageReference "Pages" */,
 				DED501D125FABD56008FBD91 /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
+				DED501E125FBEDE0008FBD91 /* XCRemoteSwiftPackageReference "swiftUI-photo-library-picker" */,
 			);
 			productRefGroup = DE95209025EF2B480035358F /* Products */;
 			projectDirPath = "";
@@ -395,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEFE954D25F6856300AE5BF5 /* HorizontalPicker.swift in Sources */,
+				DED501D825FB4B9D008FBD91 /* TextField.swift in Sources */,
 				DE95218E25F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DE51212B25F34F4600AF5320 /* BreatheScroller.swift in Sources */,
 				DEFF2FB225FA9546005597B2 /* audioRecord.swift in Sources */,
@@ -407,6 +418,7 @@
 				DE95215125F09B800035358F /* CustomPicker.swift in Sources */,
 				DE9520F525EF53D50035358F /* EnterName.swift in Sources */,
 				DE9520FC25EF54680035358F /* TopTabMenu.swift in Sources */,
+				DED501DD25FBABFD008FBD91 /* Menu.swift in Sources */,
 				DE95209325EF2B480035358F /* AppDelegate.swift in Sources */,
 				DECA2B4B25F957E10058F458 /* Authentication.swift in Sources */,
 				DEFF2E6A25F9F6F9005597B2 /* Notebook.swift in Sources */,
@@ -797,6 +809,14 @@
 				minimumVersion = 0.9.2;
 			};
 		};
+		DED501E125FBEDE0008FBD91 /* XCRemoteSwiftPackageReference "swiftUI-photo-library-picker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moifort/swiftUI-photo-library-picker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 		DEFF2E7025F9F741005597B2 /* XCRemoteSwiftPackageReference "Pages" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nachonavarro/Pages";
@@ -817,6 +837,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DED501D125FABD56008FBD91 /* XCRemoteSwiftPackageReference "SwiftSpeech" */;
 			productName = SwiftSpeech;
+		};
+		DED501E225FBEDE0008FBD91 /* PhotoLibraryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DED501E125FBEDE0008FBD91 /* XCRemoteSwiftPackageReference "swiftUI-photo-library-picker" */;
+			productName = PhotoLibraryPicker;
 		};
 		DEFF2E7125F9F741005597B2 /* Pages */ = {
 			isa = XCSwiftPackageProductDependency;

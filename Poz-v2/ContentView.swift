@@ -12,20 +12,25 @@ struct ContentView: View {
     @State var index = 0
     
     
-    @State private var newUser = false;
-    
+    // to decide which login views to show
+    @State private var newUser = false; // face id switch
     @State private var isWelcomeScreensShowing = false // onboard screen switch
     @State private var isEnterNameScreenShowing = false // enter name screen switch
-
-    @State public var addNoteShowing = false
     
-    @State public var x = 1
+//    @State public var x = 1
     
     @State public var isUnlocked = true
     
+    //username
     let user = User()
     
+    //  for paging to new  note page
     @State var indexH: Int = 1
+    
+    
+    //for  side menu
+    @State var dark = false
+    @State var show = false
     
     var body: some View {
         
@@ -34,28 +39,8 @@ struct ContentView: View {
                 VStack {
                     if (self.index == 0) {
                 
-                    
-                        VStack {
-//                            ScrollView(.vertical) {
-//                                userNameOutput().environmentObject(user)
-//                                    .padding(.bottom, 30)
-//
-//                                QuoteBlock()
-//                                    .padding(.bottom, 30)
-//
-//                                JournalTypes(x: self.x)
-//                                    .padding(.bottom, 30)
-//
-//                                BreatheScroller()
-//
-//                            }
-//                            NotesList()
-                            Notebook(indexH: self.indexH)
-                    
-                        }
-                        .padding(.top, -8)
-                        .padding(.bottom, -8)
-
+                        Notebook(indexAdd: self.indexH)
+                        
                     } else if (self.index == 2) {
 //                        Dashboard()
                     }
@@ -73,7 +58,7 @@ struct ContentView: View {
                     Button(action: {isWelcomeScreensShowing = false}) {
                         Text("Get Started")
                             .font(Font.custom("Poppins-Regular", size: 20))
-                            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                            .foregroundColor(Color.primary)
                             .frame(width: 200, height: 50)
                             .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
                             .cornerRadius(50)
@@ -88,7 +73,7 @@ struct ContentView: View {
                             Button(action: { isEnterNameScreenShowing = false }) {
                                 Text("Next")
                                     .font(Font.custom("Poppins-Regular", size: 20))
-                                    .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                                    .foregroundColor(Color.primary)
                                     .frame(width: 200, height: 50)
                                     .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
                                     .cornerRadius(50)
@@ -149,3 +134,48 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(isUnlocked: false)
     }
 }
+
+
+
+// side menu
+//                        ZStack (alignment: .leading) {
+//
+//                            GeometryReader {_  in
+//
+////                                Notebook(indexAdd: self.indexH)
+//
+//                                //button to call side menu
+//                                Button(action: {
+//
+//                                    withAnimation(.default) {
+//                                        self.show.toggle()
+//                                    }
+//
+//                                }) {
+//                                    ZStack{
+//                                        Circle()
+//                                            .frame(width: 40, height: 40)
+//                                            .foregroundColor(self.dark ?  Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9884551167, green: 1, blue: 0.9494463801, alpha: 1)))
+//                                        Image(systemName: "line.horizontal.3").resizable()
+//                                            .frame(width: 15, height: 12)
+//                                            .foregroundColor(Color.primary)
+//                                    }
+//                                }
+//                                .offset(x: 14, y: 20)
+//
+//                            }
+//
+//                            //side menu
+//                            HStack {
+//                                Menu(dark: self.$dark, show: self.$show)
+//                                    .preferredColorScheme(self.dark ? .dark : .light)
+//                                    .offset(x: self.show ? 0 : -UIScreen.main.bounds.width)
+//
+//
+//                                Spacer(minLength: 0)
+//                            }
+//                            .background(Color.primary.opacity(self.show ? (self.dark ?  0.05 : 0.2) : 0).edgesIgnoringSafeArea(.all))
+//                        }
+//                        .padding(.top, -8)
+//                        .padding(.bottom, -8)
+//                        
