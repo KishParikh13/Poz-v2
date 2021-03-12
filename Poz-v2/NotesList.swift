@@ -7,19 +7,42 @@ struct NotesList: View {
     @FetchRequest(entity: Note.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Note.createdAt, ascending: false)]) var notes: FetchedResults<Note>
     
     @State public var addNoteShowing = false
+
+    
+    //filtering
+    @State var text = ""
     
     var body: some View {
         
         //list of all notes
         VStack {
+            
             Capsule()
                 .frame(width: 100, height: 8)
                 .padding(.top, 10)
                 .foregroundColor(.gray)
-                .padding(.bottom, 10)
+                .padding(.bottom, 15)
+        
+            VStack {
+                ZStack (alignment: .topLeading) {
+                    
+                    SearchView(searchText: $text)
+                    
+                    if text.isEmpty {
+                        Text("Search previous entries")
+                            .foregroundColor(.gray)
+                            .padding(.top, 18)
+                            .padding(.leading, 38)
+                    }
+                }
+                .padding(.top, -10)
+                .padding(.horizontal, 20)
+            }
+            
+            
             
             List {
-                ForEach (notes, id: \.id) { notes in
+                ForEach (notes.filter{ text == "" ? true : $0.note!.localizedCaseInsensitiveContains(text)}, id: \.id) { notes in
                     HStack (alignment: .top) {
                         Text(notes.emoji ?? "😶")
                             .font(.system(size: 48))
@@ -34,26 +57,10 @@ struct NotesList: View {
                     .padding(.top, 2)
                     .padding(.bottom, 2)
                 }
-//                .onDelete(perform: removeItem) //delete command
             }
             .padding(.top, -8)
             .padding(.bottom, -8)
-//
-//            //addnote button
-//            Button(action: { addNoteShowing.toggle() }) {
-//                ZStack{
-//                    Circle()
-//                        .frame(width: 60, height: 60)
-//                        .foregroundColor(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
-//                    Image(systemName: "plus")
-//                    .font(.largeTitle)
-//                    .foregroundColor(.black)
-//                }
-//            }
-//            .offset(x: (UIScreen.main.bounds.width/2 - 50), y: (UIScreen.main.bounds.height/2 - 150))
-//            .sheet(isPresented: $addNoteShowing, content: { addNote() })
-//            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1490374432)), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-//
+
         }
     }
     

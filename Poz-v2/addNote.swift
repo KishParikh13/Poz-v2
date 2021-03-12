@@ -24,6 +24,7 @@ struct addNote: View {
     
     public init(sessionConfiguration: SwiftSpeech.Session.Configuration) {
         UITextView.appearance().backgroundColor = .clear
+        
         self.sessionConfiguration = sessionConfiguration
     }
     
@@ -62,31 +63,32 @@ struct addNote: View {
             .font(.system(size: 48))
         
         //text input
-        ZStack (alignment: .topLeading) {
-            if message.isEmpty {
-                Text("What's on your mind?")
-                    .foregroundColor(.gray)
-                    .padding(.top, 8)
-                    .padding(.leading, 7)
-            }
+        VStack {
+            ScrollView {
+                ZStack (alignment: .topLeading) {
+                    if message.isEmpty {
+                        Text("What's on your mind?")
+                            .foregroundColor(.gray)
+                            .padding(.top, 8)
+                            .padding(.leading, 7)
+                    }
+                    
+                    TextEditor(text: self.$message)
+                        .background(Color.clear)
+                        .frame(maxHeight: .infinity)
+                }
+                .padding(.top, -10)
+                .padding(.horizontal, 20)
+                
+                Spacer(minLength: 50)
             
-            TextEditor(text: self.$message)
-                .background(Color.clear)
-        }
-        .padding(.top, -10)
-        .padding(.horizontal, 20)
-        
-        List {
-            ForEach(pictures) { picture in
-                picture.toImage() // You can fix the size by default width: 100, height: 100
+                ForEach(pictures) { picture in
+                    picture.toImage()
+                        .resizable().scaledToFit().aspectRatio(contentMode: .fit)
+                }
+                .padding(.horizontal, 20)
             }
         }
-        .background(Color.clear)
-         
-        
-        Spacer()
-
-        //bottom buttons
         
         if (emojiPickerShowing == true) {
             Text("Scroll below to tag entry with emoji")
@@ -114,6 +116,7 @@ struct addNote: View {
             .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1490374432)), radius: 5)
             
             //speech to text button
+            // adapted from https://github.com/Cay-Zhang/SwiftSpeech
             SwiftSpeech.RecordButton()
                 .swiftSpeechToggleRecordingOnTap(sessionConfiguration: sessionConfiguration, animation: .spring(response: 0.3, dampingFraction: 0.5, blendDuration: 0))
                 .onRecognizeLatest(update: $message)

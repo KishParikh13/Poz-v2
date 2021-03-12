@@ -22,6 +22,9 @@ struct Notebook: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var notesListShowing: Bool = false;
     
+    
+//    @State private var lastNameFilter = "A"
+    
     var body: some View {
         
         Pages( // highest level page system to old old entry pages and add entry
@@ -59,7 +62,7 @@ struct Notebook: View {
                                 Button (action: {notesListShowing.toggle()}) {
                                     Image(systemName: "square.and.pencil")
                                 }
-                                .sheet(isPresented: $notesListShowing, content: { NotesList() })
+                                .sheet(isPresented: $notesListShowing, content: { })
                             }
                             .padding(.top, 50)
                             

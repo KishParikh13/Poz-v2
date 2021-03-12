@@ -10,7 +10,7 @@ struct Dashboard: View {
             appTopBar(index: self.$index, offset: self.$offset)
             
             if (index == 0) {
-                NotesList()
+//                NotesList()
             } else if (index == 1) {
                 Stats()
             }

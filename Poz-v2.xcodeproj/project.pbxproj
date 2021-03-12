@@ -42,6 +42,7 @@
 		DED501D825FB4B9D008FBD91 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED501D725FB4B9D008FBD91 /* TextField.swift */; };
 		DED501DD25FBABFD008FBD91 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED501DC25FBABFD008FBD91 /* Menu.swift */; };
 		DED501E325FBEDE0008FBD91 /* PhotoLibraryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = DED501E225FBEDE0008FBD91 /* PhotoLibraryPicker */; };
+		DED501F025FC0369008FBD91 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED501EF25FC0369008FBD91 /* SearchView.swift */; };
 		DEFE954D25F6856300AE5BF5 /* HorizontalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */; };
 		DEFE955425F6897800AE5BF5 /* EmojiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */; };
 		DEFF2E6A25F9F6F9005597B2 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF2E6925F9F6F9005597B2 /* Notebook.swift */; };
@@ -137,6 +138,7 @@
 		DECA2B4A25F957E10058F458 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		DED501D725FB4B9D008FBD91 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DED501DC25FBABFD008FBD91 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		DED501EF25FC0369008FBD91 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPicker.swift; sourceTree = "<group>"; };
 		DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPicker.swift; sourceTree = "<group>"; };
 		DEFF2E6925F9F6F9005597B2 /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				DE95211D25EFF6C70035358F /* Stats.swift */,
 				DE9520CE25EF2D5D0035358F /* NotesList.swift */,
 				DE95211325EF82000035358F /* addNote.swift */,
+				DED501EF25FC0369008FBD91 /* SearchView.swift */,
 				DED501DC25FBABFD008FBD91 /* Menu.swift */,
 				DED501D725FB4B9D008FBD91 /* TextField.swift */,
 				DEFF2FB125FA9546005597B2 /* audioRecord.swift */,
@@ -408,6 +411,7 @@
 				DED501D825FB4B9D008FBD91 /* TextField.swift in Sources */,
 				DE95218E25F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DE51212B25F34F4600AF5320 /* BreatheScroller.swift in Sources */,
+				DED501F025FC0369008FBD91 /* SearchView.swift in Sources */,
 				DEFF2FB225FA9546005597B2 /* audioRecord.swift in Sources */,
 				DE95211425EF82000035358F /* addNote.swift in Sources */,
 				DEFE955425F6897800AE5BF5 /* EmojiPicker.swift in Sources */,
