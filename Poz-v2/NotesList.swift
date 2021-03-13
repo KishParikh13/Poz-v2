@@ -57,6 +57,7 @@ struct NotesList: View {
                     .padding(.top, 2)
                     .padding(.bottom, 2)
                 }
+//                .onDelete(perform: removeItem)
             }
             .padding(.top, -8)
             .padding(.bottom, -8)

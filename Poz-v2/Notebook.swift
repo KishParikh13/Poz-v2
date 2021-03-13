@@ -23,6 +23,10 @@ struct Notebook: View {
     @State private var notesListShowing: Bool = false;
     
     
+    @State private var editing: Bool = false;
+    
+    @State private var temptext = "";
+    
 //    @State private var lastNameFilter = "A"
     
     var body: some View {
@@ -41,9 +45,7 @@ struct Notebook: View {
                     
                     // note page
                     VStack (alignment: .leading) {
-                        
-                        
-                        
+
                         ScrollView (.vertical, showsIndicators: false) {
                             
                             HStack {
@@ -59,17 +61,35 @@ struct Notebook: View {
                                 
                                 Spacer()
                                 
-                                Button (action: {notesListShowing.toggle()}) {
-                                    Image(systemName: "square.and.pencil")
+                                Button (action: {
+                                    editing.toggle()
+                                    temptext = notes.note ?? ""
+                                }) {
+                                    Image(systemName: "pencil")
                                 }
-                                .sheet(isPresented: $notesListShowing, content: { })
+//                                .sheet(isPresented: , content: { })
                             }
                             .padding(.top, 50)
                             
-                            Text(notes.emoji ?? "")
-                                .font(.system(size: 48))
-                            Text(notes.note ?? "Could not load note")
-                                .font(.system(size: 20))
+
+                            if (editing) {
+                                VStack {
+                                    TextEditor(text: $temptext)
+                                        .background(Color.clear)
+    //                                    .frame(height: 200)
+                                    Button ("Save", action: {
+                                        notes.note = temptext
+                                        editing.toggle()
+                                    })
+                                }
+                                .padding(.top, 100)
+                            } else {
+                                Text(notes.emoji ?? "")
+                                    .font(.system(size: 48))
+                                Text(notes.note ?? "Could not load note")
+                                    .font(.system(size: 20))
+                            }
+                            
                         }
                         .padding()
                     }
@@ -108,15 +128,7 @@ struct Notebook: View {
         .ignoresSafeArea(edges: .all)
     }
 
-    
 }
-//
-//struct Notebook_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Notebook()
-//    }
-//}
-
 
 struct Buttons: View {
     var body: some View {
@@ -129,25 +141,3 @@ struct Buttons: View {
         .padding(.horizontal, 60)
     }
 }
-//
-//struct AddNoteButton: View {
-//   //addnote button
-//Button(action: {
-//    addNoteShowing.toggle()
-//    indexH = 1
-//}) {
-//    ZStack{
-//        Circle()
-//            .frame(width: 60, height: 60)
-//            .foregroundColor(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
-//        Image(systemName: "plus")
-//        .foregroundColor(.black)
-//    }
-//}
-//.offset(x: 0, y: (UIScreen.main.bounds.height/2 - 150))
-////        .sheet(isPresented: $addNoteShowing, content: { addNote() })
-//.shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.09803921569)), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-//    var body: some View {
-//
-//    }
-//}
