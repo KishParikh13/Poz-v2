@@ -2,7 +2,7 @@ import SwiftUI
 import LocalAuthentication
 
 class User : ObservableObject {
-    @Published var name = ""
+    @Published var name = UserDefaults.standard.string(forKey: "Tap") ?? "";
 }
 
 
@@ -13,13 +13,12 @@ struct ContentView: View {
     
     
     // to decide which login views to show
-    @State private var newUser = false; // face id switch
+    @State private var newUser = UserDefaults.standard.bool(forKey: "Tap"); // face id switch
     @State private var isWelcomeScreensShowing = false // onboard screen switch
     @State private var isEnterNameScreenShowing = false // enter name screen switch
-    
-//    @State public var x = 1
-    
-    @State public var isUnlocked = true
+
+    @State public var isUnlocked = false
+    @State var bookOpen = false;
     
     //username
     let user = User()
@@ -38,8 +37,48 @@ struct ContentView: View {
             if self.isUnlocked {
                 VStack {
                     if (self.index == 0) {
-                
-                        Notebook(indexAdd: self.indexH)
+                        
+                        if (bookOpen == false) {
+                            
+                            
+                            ZStack {
+                                WebView()
+                                
+                                Text("Good Morning")
+                                    .font(Font.custom("Blueberry", size: 26))
+                                    .offset(x: 0, y: -320)
+                                    .opacity(0.6)
+                                Text(user.name)
+                                    .font(Font.custom("Blueberry", size: 42))
+                                    .offset(x: 0, y: -270)
+//                                userNameOutput()
+                                
+//   
+                                
+                                Circle()
+                                    .foregroundColor(Color.white)
+                                    .offset(x: 70, y: 370)
+                                
+                                Button( action: { bookOpen.toggle() }) {
+                                    ZStack{
+                                        Text("Open")
+                                    }
+                                    .font(Font.custom("Poppins-Regular", size: 20))
+                                    .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                                    .frame(width: 200, height: 50)
+                                    .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
+                                    .cornerRadius(50)
+                                    .padding(.horizontal, 20)
+                                    .padding(.bottom, 60)
+                                }
+                                .offset(x: 0, y: 300)
+                            }
+                            .padding()
+                            
+                            
+                        } else {
+                            Notebook(indexAdd: self.indexH)
+                        }
                         
                     } else if (self.index == 2) {
 //                        Dashboard()
@@ -55,7 +94,7 @@ struct ContentView: View {
             } else {
                 if (isWelcomeScreensShowing == true) {
                     Onboarding()
-                    Button(action: {isWelcomeScreensShowing = false}) {
+                    Button(action: { isWelcomeScreensShowing = false }) {
                         Text("Get Started")
                             .font(Font.custom("Poppins-Regular", size: 20))
                             .foregroundColor(Color.primary)
@@ -70,7 +109,17 @@ struct ContentView: View {
                             .padding(.top, 20)
 
                         ZStack {
-                            Button(action: { isEnterNameScreenShowing = false }) {
+                            Button(action: {
+                                isEnterNameScreenShowing = false
+                                isUnlocked = true
+                                if (user.name == "") {
+                                    user.name = "You"
+                                }
+                                
+                                newUser = false
+                                UserDefaults.standard.set(user.name, forKey: "Tap")
+                                UserDefaults.standard.set(newUser, forKey: "Tap")
+                            }) {
                                 Text("Next")
                                     .font(Font.custom("Poppins-Regular", size: 20))
                                     .foregroundColor(Color.primary)
@@ -81,11 +130,12 @@ struct ContentView: View {
                                     .padding(.bottom, 60)
                             }
                             Button (action: {
-                                        isEnterNameScreenShowing = false
-                                        isUnlocked = true},
-                                    label: {Text("Skip")})
-                                .offset(x: 150, y: -30)
-
+                                isEnterNameScreenShowing = false
+                                isUnlocked = true
+                                user.name = "You"
+                                
+                            }, label: {Text("Skip")})
+                            .offset(x: 150, y: -30)
                         }
                 }
             } // when not authenticated

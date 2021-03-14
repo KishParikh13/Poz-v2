@@ -74,15 +74,37 @@ struct Notebook: View {
 
                             if (editing) {
                                 VStack {
+                                    Text(notes.emoji ?? "")
+                                        .font(.system(size: 48))
+                                        .padding(.top, 8)
+                                        .padding(.leading, 5)
+                                        .padding(.bottom, -10)
+                                    
                                     TextEditor(text: $temptext)
                                         .background(Color.clear)
+                                        .font(.system(size: 20))
     //                                    .frame(height: 200)
-                                    Button ("Save", action: {
+                                    
+                                    //submit button
+                                    Button(action: {
                                         notes.note = temptext
                                         editing.toggle()
-                                    })
+                                    }) {
+                                        ZStack{
+                                            Text("Save")
+                                        }
+                                        .foregroundColor(.black)
+                                        .font(Font.custom("Poppins-Regular", size: 20))
+                                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                                        .frame(width: 200, height: 50)
+                                        .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
+                                        .cornerRadius(50)
+                                        .padding(.horizontal, 20)
+                                        .padding(.bottom, 60)
+                                    }
                                 }
-                                .padding(.top, 100)
+                                .padding(.top, -16)
+                                .padding(.leading, -5)
                             } else {
                                 Text(notes.emoji ?? "")
                                     .font(.system(size: 48))
@@ -93,11 +115,11 @@ struct Notebook: View {
                         }
                         .padding()
                     }
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+//                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                     .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9884551167, green: 1, blue: 0.9494463801, alpha: 1)))
                     .ignoresSafeArea(edges: .all)
                 }
-                .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9884551167, green: 1, blue: 0.9494463801, alpha: 1)))
+                .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9882352941, green: 1, blue: 0.9490196078, alpha: 1)))
                 .ignoresSafeArea(edges: .all)
                 
                 //addnote button

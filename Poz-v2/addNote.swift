@@ -163,7 +163,7 @@ struct addNote: View {
         }
         
         //submit button
-        Button("Submit") {
+        Button( action: {
             
             // create note item
             let note = Note(context: self.moc)
@@ -189,16 +189,20 @@ struct addNote: View {
 
             presentationMode.wrappedValue.dismiss() //dismiss popup on click
 
+        }) {
+            ZStack{
+                Text("Save")
+            }
+            .disabled(message == "")
+            .foregroundColor(message == "" ? .gray : .black)
+            .font(Font.custom("Poppins-Regular", size: 20))
+            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+            .frame(width: 200, height: 50)
+            .background(message == "" ? Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) : Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
+            .cornerRadius(50)
+            .padding(.horizontal, 20)
+            .padding(.bottom, 60)
         }
-        .disabled(message == "")
-        .foregroundColor(message == "" ? .gray : .black)
-        .font(Font.custom("Poppins-Regular", size: 20))
-        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-        .frame(width: 200, height: 50)
-        .background(message == "" ? Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) : Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
-        .cornerRadius(50)
-        .padding(.horizontal, 20)
-        .padding(.bottom, 60)
     }
     
 }
