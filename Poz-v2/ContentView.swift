@@ -2,7 +2,7 @@ import SwiftUI
 import LocalAuthentication
 
 class User : ObservableObject {
-    @Published var name = UserDefaults.standard.string(forKey: "Tap") ?? "";
+    @Published var name = "" // UserDefaults.standard.string(forKey: "Tap") ?? "";
 }
 
 
@@ -13,7 +13,7 @@ struct ContentView: View {
     
     
     // to decide which login views to show
-    @State private var newUser = UserDefaults.standard.bool(forKey: "Tap"); // face id switch
+    @State private var newUser = false // UserDefaults.standard.bool(forKey: "Tap"); // face id switch
     @State private var isWelcomeScreensShowing = false // onboard screen switch
     @State private var isEnterNameScreenShowing = false // enter name screen switch
 
@@ -34,12 +34,15 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            if self.isUnlocked {
+            if (self.isUnlocked) {
                 VStack {
                     if (self.index == 0) {
                         
                         if (bookOpen == false) {
                             
+                            Notebook(indexAdd: self.indexH)
+                            
+                        } else {
                             
                             ZStack {
                                 WebView()
@@ -59,7 +62,10 @@ struct ContentView: View {
                                     .foregroundColor(Color.white)
                                     .offset(x: 70, y: 370)
                                 
-                                Button( action: { bookOpen.toggle() }) {
+                                Button( action: {
+                                            bookOpen.toggle()
+                                    
+                                }) {
                                     ZStack{
                                         Text("Open")
                                     }
@@ -76,8 +82,8 @@ struct ContentView: View {
                             .padding()
                             
                             
-                        } else {
-                            Notebook(indexAdd: self.indexH)
+                        
+                           
                         }
                         
                     } else if (self.index == 2) {

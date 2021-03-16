@@ -1,10 +1,6 @@
 import SwiftUI
 import Pages
 
-struct Car {
-    var model: String
-}
-
 struct Notebook: View {
 
     // for previus entry  pages
@@ -27,6 +23,10 @@ struct Notebook: View {
     
     @State private var temptext = "";
     
+    
+    @State var image: Data = .init(count: 0)
+    @State var show = false
+    
 //    @State private var lastNameFilter = "A"
     
     var body: some View {
@@ -48,6 +48,7 @@ struct Notebook: View {
 
                         ScrollView (.vertical, showsIndicators: false) {
                             
+                            //top bar
                             HStack {
                                 Button (action: {notesListShowing.toggle()}) {
                                     Image(systemName: "list.bullet")
@@ -73,6 +74,8 @@ struct Notebook: View {
                             
 
                             if (editing) {
+                                
+                                // if editing is on
                                 VStack {
                                     Text(notes.emoji ?? "")
                                         .font(.system(size: 48))
@@ -108,8 +111,20 @@ struct Notebook: View {
                             } else {
                                 Text(notes.emoji ?? "")
                                     .font(.system(size: 48))
-                                Text(notes.note ?? "Could not load note")
-                                    .font(.system(size: 20))
+                                
+                                VStack (alignment: .leading) {
+                                    Text(notes.note ?? "Could not load note")
+                                        .font(.system(size: 20))
+                                }
+                                
+                                if (self.image.count != 0) {
+                                    Image(uiImage: UIImage(data: self.image)!)
+                                        .resizable()
+                                        .renderingMode(.original)
+                                        .aspectRatio(contentMode: .fit)
+                                        .cornerRadius(6)
+                                        .padding()
+                                }
                             }
                             
                         }
@@ -139,7 +154,7 @@ struct Notebook: View {
             }
             
             
-            addNote()
+            addNote() //.environment(\.managedObjectContext, self.moc)
         }
         .onAppear {
            DispatchQueue.main.async {

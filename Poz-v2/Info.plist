@@ -6,6 +6,7 @@
 	<array>
 		<string>Blueberry Regular.otf</string>
 		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Bold.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
