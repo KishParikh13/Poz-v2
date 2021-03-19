@@ -1,11 +1,6 @@
-//
-//  JournalTypes.swift
-//  Poz-v2
-//
-//  Created by Kish Parikh on 3/5/21.
-//
-
 import SwiftUI
+
+// a horizontal carousel of breathe type buttons
 
 struct BreatheScroller: View {
     let exercises: [BreathingExercise] = [

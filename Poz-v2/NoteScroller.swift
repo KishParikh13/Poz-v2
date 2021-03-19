@@ -1,5 +1,7 @@
 import SwiftUI
 
+// a horizontal carousel of entry type buttons
+
 struct JournalTypes: View {
     let types: [Journal] = [
         Journal(name: "Note", emoji: "😳", color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)), x: 0),

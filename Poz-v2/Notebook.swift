@@ -91,6 +91,7 @@ struct Notebook: View {
                     .padding(.horizontal, 20)
                     .padding(.bottom, 3)
 
+                    //note content
                     ScrollView (.vertical, showsIndicators: false) {
 
                             if (editing) {
@@ -179,6 +180,7 @@ struct Notebook: View {
 
         }
         .onAppear {
+            // set the previous entry pages index to last - 1 so its starts at the most recent entry
            DispatchQueue.main.async {
               self.index = notes.count - 1
            }

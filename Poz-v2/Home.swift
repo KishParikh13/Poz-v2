@@ -1,11 +1,7 @@
-//
-//  Home.swift
-//  Poz-v2
-//
-//  Created by Kish Parikh on 3/18/21.
-//
-
 import SwiftUI
+
+
+//home screen not being used atm
 
 struct Home: View {
 //    @State public var isBookOpen: Bool

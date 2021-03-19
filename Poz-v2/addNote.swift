@@ -53,12 +53,7 @@ struct addNote: View {
     
     var body: some View {
         
-        
-        
-        
         //home button
-        
-        
         HStack {
             Text("\(dateString)")
                 .font(Font.custom("Poppins-Bold", size: 16))
@@ -71,7 +66,7 @@ struct addNote: View {
                 .font(.system(size: 16))
                 .padding(.horizontal, 2)
             
-            // tag picker
+            // tag button
             Button (action: {
                 tagEntrySheetShowing.toggle()
             }) {
@@ -97,6 +92,7 @@ struct addNote: View {
                 }
                 
             }
+            //tag popup
             .sheet(isPresented: $tagEntrySheetShowing) {
                 VStack {
                     Picker("Please choose a color", selection: $selectedTag) {
@@ -153,7 +149,7 @@ struct addNote: View {
 //                .padding(.top, 8)
                 .padding(.horizontal, 20)
                 
-                
+                //image display
 //                if (self.image.count != 0) {
 //                    Image(uiImage: UIImage(data: self.image)!)
 //                        .resizable()
@@ -168,9 +164,11 @@ struct addNote: View {
             .padding(.top, -11)
         }
         .onTapGesture {
+            //hide keyboard when user taps outside text field
             hideKeyboard()
         }
         
+        //emoji picker
         if (emojiPickerShowing == true) {
             Text("Scroll below to tag entry with emoji")
                 .padding(.top, 30)

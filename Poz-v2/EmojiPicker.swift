@@ -22,6 +22,7 @@ struct EmojiPicker: View {
     @State private var currentIndex: Int = 0
     @Namespace private var ns
     
+    //add all the emojis
     init(selectedIndex: Binding<Int>, selected: Binding<String>) {
         _selectedIndex = selectedIndex
         _selected = selected

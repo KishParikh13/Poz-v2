@@ -1,10 +1,3 @@
-//
-//  Journal.swift
-//  Poz-v2
-//
-//  Created by Kish Parikh on 3/13/21.
-//
-
 import SwiftUI
 
 struct JournalPicker: View {

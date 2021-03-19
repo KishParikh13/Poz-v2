@@ -1,13 +1,9 @@
-//
-//  Demos.swift
-//
-//
-//  Created by Cay Zhang on 2020/2/23.
-//
 import SwiftUI
 import Combine
 import Speech
 import SwiftSpeech
+
+// swift speech for speech to text taken from Cay Zhang - https://github.com/Cay-Zhang/SwiftSpeech
 
 struct audioRecord: View {
     

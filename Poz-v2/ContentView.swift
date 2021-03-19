@@ -38,7 +38,6 @@ struct ContentView: View {
     //for  side menu
     @State var dark = false
     @State var show = false
-    
     @State private var notesListShowing: Bool = false;
     
     let colorString = "red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)"
@@ -50,6 +49,7 @@ struct ContentView: View {
                 
                 VStack {
                     
+                    //top navigation
                     HStack (spacing: 100){
                         // notes list button
                         Button (action: { notesListShowing.toggle() }){
@@ -82,6 +82,7 @@ struct ContentView: View {
                     .padding(.top, 50)
                     .padding(.bottom, -3)
 
+                    // if book is open, show notebook
                     if (isBookOpen) {
                         
                         if (bookOpen.isOpen == false) {
@@ -94,7 +95,7 @@ struct ContentView: View {
                     } else if (!isBookOpen) {
                         
                         
-                        
+                        // home screen
                         if (self.index == 0) {
                             VStack {
                             ScrollView(.vertical) {
@@ -143,6 +144,8 @@ struct ContentView: View {
 
                             }
                         }
+                            
+                        //dashboard screen
                         } else if (self.index == 2) {
                             Dashboard()
                         }
@@ -156,6 +159,7 @@ struct ContentView: View {
 //                bottomTabs(index: self.$index)
                 
                 
+                // onboarding login
             } else {
                 if (isWelcomeScreensShowing == true) {
                     Onboarding()
@@ -209,6 +213,7 @@ struct ContentView: View {
         
     }
     
+    //checks if its user first time loggin in
     func checkNewUser() { //checks if theres new user, either authenticates or onboards
         if (newUser == true) {
             isWelcomeScreensShowing = true
@@ -221,6 +226,7 @@ struct ContentView: View {
         }
     }
     
+    // face id
     func authenticate() {
         let context = LAContext()
         var error: NSError?
