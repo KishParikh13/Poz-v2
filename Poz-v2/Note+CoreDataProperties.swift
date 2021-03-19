@@ -23,6 +23,7 @@ extension Note {
     @NSManaged public var img: Data?
     @NSManaged public var note: String?
     @NSManaged public var stringLength: Double
+    @NSManaged public var entryTag: String
 
 }
 

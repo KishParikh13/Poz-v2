@@ -5,6 +5,10 @@ class User : ObservableObject {
     @Published var name = "" // UserDefaults.standard.string(forKey: "Tap") ?? "";
 }
 
+class BookOpen : ObservableObject {
+    @Published var isOpen = false // UserDefaults.standard.string(forKey: "Tap") ?? "";
+}
+
 
 struct ContentView: View {
     
@@ -18,83 +22,138 @@ struct ContentView: View {
     @State private var isEnterNameScreenShowing = false // enter name screen switch
 
     @State public var isUnlocked = false
-    @State var bookOpen = false;
     
+    
+    @State var isBookOpen: Bool = true;
+    let bookOpen = BookOpen()
+
     //username
     let user = User()
     
     //  for paging to new  note page
     @State var indexH: Int = 1
     
+    @Environment(\.colorScheme) var colorScheme
     
     //for  side menu
     @State var dark = false
     @State var show = false
     
+    @State private var notesListShowing: Bool = false;
+    
+    let colorString = "red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)"
+    
     var body: some View {
         
         VStack {
             if (self.isUnlocked) {
+                
                 VStack {
-                    if (self.index == 0) {
+                    
+                    HStack (spacing: 100){
+                        // notes list button
+                        Button (action: { notesListShowing.toggle() }){
+                            Image(systemName: "clock.arrow.circlepath")
+                                .resizable().frame(width: 27, height: 25)
+                                .foregroundColor(isBookOpen == true ? Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)) : Color(#colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)))
+                        }
+                        .sheet(isPresented: $notesListShowing, content: { NotesList() })
                         
-                        if (bookOpen == false) {
-                            
-                            Notebook(indexAdd: self.indexH)
-                            
-                        } else {
-                            
-                            ZStack {
-                                WebView()
-                                
-                                Text("Good Morning")
-                                    .font(Font.custom("Blueberry", size: 26))
-                                    .offset(x: 0, y: -320)
-                                    .opacity(0.6)
-                                Text(user.name)
-                                    .font(Font.custom("Blueberry", size: 42))
-                                    .offset(x: 0, y: -270)
-//                                userNameOutput()
-                                
-//   
-                                
-                                Circle()
-                                    .foregroundColor(Color.white)
-                                    .offset(x: 70, y: 370)
-                                
-                                Button( action: {
-                                            bookOpen.toggle()
-                                    
-                                }) {
-                                    ZStack{
-                                        Text("Open")
-                                    }
-                                    .font(Font.custom("Poppins-Regular", size: 20))
-                                    .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-                                    .frame(width: 200, height: 50)
-                                    .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
-                                    .cornerRadius(50)
-                                    .padding(.horizontal, 20)
-                                    .padding(.bottom, 60)
-                                }
-                                .offset(x: 0, y: 300)
-                            }
-                            .padding()
-                            
-                            
-                        
-                           
+                        //open close journal button
+                        Button (action: { isBookOpen.toggle() }){
+                            Image(systemName: (isBookOpen == true ? "book.circle.fill" : "book.circle"))
+                                .resizable().frame(width: 30, height: 30)
+                                .foregroundColor(isBookOpen == true ? Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)) : Color(#colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)))
                         }
                         
-                    } else if (self.index == 2) {
-//                        Dashboard()
+//                        stats
+                        Button (action: {
+                            if (index == 0) {
+                                index = 2
+                            } else if (index == 2) {
+                                index = 0
+                            }
+                        }){
+                            Image(systemName: "number.circle")
+                                .resizable().frame(width: 30, height: 30)
+                                .foregroundColor(isBookOpen == true ? Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)) : Color(#colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)))
+                        }
+                    }
+                    .padding(.top, 50)
+                    .padding(.bottom, -3)
+
+                    if (isBookOpen) {
+                        
+                        if (bookOpen.isOpen == false) {
+                            
+                            Notebook(indexAdd: self.indexH).environmentObject(bookOpen)
+                            
+                        } else { }
+                        
+//                    } else if (self.index == 2) {
+                    } else if (!isBookOpen) {
+                        
+                        
+                        
+                        if (self.index == 0) {
+                            VStack {
+                            ScrollView(.vertical) {
+                                
+                                VStack  { // (alignment: .leading)
+                                    Text("Good morning,")
+                                        .font(Font.custom("Poppins-Regular", size: 24))
+                                        .foregroundColor(Color.primary)
+                                        .padding(.top, 20)
+                                    Text("Kish")
+                                        .font(Font.custom("Poppins-Bold", size: 42))
+                                        .foregroundColor(Color.primary)
+                                
+
+//                                    VStack {
+                                        Image("notebook").resizable().frame(width: 350, height: 380)
+//                                            .offset(x: -70)
+                                        Button(action: { isBookOpen.toggle() }) {
+                                            Text("Open Journal")
+                                                .font(Font.custom("Poppins-Regular", size: 20))
+                                                .foregroundColor(Color.primary)
+                                                .frame(width: 200, height: 50)
+                                                .background(Color(#colorLiteral(red: 0.9853331447, green: 0.7925021052, blue: 0.3908675313, alpha: 1)))
+                                                .cornerRadius(50)
+//                                                .padding(.horizontal, 20)
+    //                                            .padding(.bottom, 60)
+                                        }
+//                                    }
+                                }
+                                .padding(.horizontal, 20)
+                                .padding(.top, 40)
+                                .offset(x: 0, y: -40)
+                                
+//                                userNameOutput().environmentObject(user)
+//                                    .padding(.top, 40)
+//                                    .padding(.bottom, 30)
+//
+//                                QuoteBlock()
+//                                    .padding(.bottom, 30)
+//
+////                                JournalTypes(x: self.x)
+////                                    .padding(.bottom, 30)
+
+//                                BreatheScroller()
+                                Spacer()
+
+                            }
+                        }
+                        } else if (self.index == 2) {
+                            Dashboard()
+                        }
                     }
                     
-//                    bottomTabs(index: self.$index)
                     
                 }
-                .ignoresSafeArea(edges: /*@START_MENU_TOKEN@*/.bottom/*@END_MENU_TOKEN@*/)
-                
+                .background(isBookOpen == true ? Color(#colorLiteral(red: 0.3098039329, green: 0.2039215714, blue: 0.03921568766, alpha: 1)) : Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                .ignoresSafeArea(edges: .all)
+//                .ignoresSafeArea(edges: .bottom)
+//                bottomTabs(index: self.$index)
                 
                 
             } else {
@@ -147,6 +206,7 @@ struct ContentView: View {
             } // when not authenticated
         }
         .onAppear(perform: checkNewUser)
+        
     }
     
     func checkNewUser() { //checks if theres new user, either authenticates or onboards
@@ -190,48 +250,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(isUnlocked: false)
     }
 }
-
-
-
-// side menu
-//                        ZStack (alignment: .leading) {
-//
-//                            GeometryReader {_  in
-//
-////                                Notebook(indexAdd: self.indexH)
-//
-//                                //button to call side menu
-//                                Button(action: {
-//
-//                                    withAnimation(.default) {
-//                                        self.show.toggle()
-//                                    }
-//
-//                                }) {
-//                                    ZStack{
-//                                        Circle()
-//                                            .frame(width: 40, height: 40)
-//                                            .foregroundColor(self.dark ?  Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9884551167, green: 1, blue: 0.9494463801, alpha: 1)))
-//                                        Image(systemName: "line.horizontal.3").resizable()
-//                                            .frame(width: 15, height: 12)
-//                                            .foregroundColor(Color.primary)
-//                                    }
-//                                }
-//                                .offset(x: 14, y: 20)
-//
-//                            }
-//
-//                            //side menu
-//                            HStack {
-//                                Menu(dark: self.$dark, show: self.$show)
-//                                    .preferredColorScheme(self.dark ? .dark : .light)
-//                                    .offset(x: self.show ? 0 : -UIScreen.main.bounds.width)
-//
-//
-//                                Spacer(minLength: 0)
-//                            }
-//                            .background(Color.primary.opacity(self.show ? (self.dark ?  0.05 : 0.2) : 0).edgesIgnoringSafeArea(.all))
-//                        }
-//                        .padding(.top, -8)
-//                        .padding(.bottom, -8)
-//                        

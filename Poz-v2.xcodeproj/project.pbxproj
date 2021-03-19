@@ -10,6 +10,9 @@
 		DE51212325F344F600AF5320 /* NoteScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51212225F344F600AF5320 /* NoteScroller.swift */; };
 		DE51212B25F34F4600AF5320 /* BreatheScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51212A25F34F4600AF5320 /* BreatheScroller.swift */; };
 		DE51213025F4B7DC00AF5320 /* QuoteBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51212F25F4B7DC00AF5320 /* QuoteBlock.swift */; };
+		DE84289B2603D02100DC35FD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84289A2603D02100DC35FD /* Home.swift */; };
+		DE84289C2603D02100DC35FD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84289A2603D02100DC35FD /* Home.swift */; };
+		DE84289D2603D02100DC35FD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84289A2603D02100DC35FD /* Home.swift */; };
 		DE95209325EF2B480035358F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209225EF2B480035358F /* AppDelegate.swift */; };
 		DE95209525EF2B480035358F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209425EF2B480035358F /* SceneDelegate.swift */; };
 		DE95209725EF2B480035358F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95209625EF2B480035358F /* ContentView.swift */; };
@@ -46,12 +49,6 @@
 		DED501F525FDDC75008FBD91 /* JournalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED501F425FDDC75008FBD91 /* JournalPicker.swift */; };
 		DED501FD25FE6F93008FBD91 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED501FC25FE6F93008FBD91 /* WebView.swift */; };
 		DEF25C1A25FEE8A400EFBB5C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF25C1925FEE8A400EFBB5C /* ImagePicker.swift */; };
-		DEF25C2025FEF74A00EFBB5C /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF25C1E25FEF74A00EFBB5C /* Note+CoreDataClass.swift */; };
-		DEF25C2125FEF74A00EFBB5C /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF25C1E25FEF74A00EFBB5C /* Note+CoreDataClass.swift */; };
-		DEF25C2225FEF74A00EFBB5C /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF25C1E25FEF74A00EFBB5C /* Note+CoreDataClass.swift */; };
-		DEF25C2325FEF74A00EFBB5C /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF25C1F25FEF74A00EFBB5C /* Note+CoreDataProperties.swift */; };
-		DEF25C2425FEF74A00EFBB5C /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF25C1F25FEF74A00EFBB5C /* Note+CoreDataProperties.swift */; };
-		DEF25C2525FEF74A00EFBB5C /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF25C1F25FEF74A00EFBB5C /* Note+CoreDataProperties.swift */; };
 		DEF25C2D2600124700EFBB5C /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEF25C2C2600124700EFBB5C /* Poppins-Bold.ttf */; };
 		DEF25C2E2600124700EFBB5C /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEF25C2C2600124700EFBB5C /* Poppins-Bold.ttf */; };
 		DEF25C2F2600124700EFBB5C /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEF25C2C2600124700EFBB5C /* Poppins-Bold.ttf */; };
@@ -124,6 +121,7 @@
 		DE51212225F344F600AF5320 /* NoteScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteScroller.swift; sourceTree = "<group>"; };
 		DE51212A25F34F4600AF5320 /* BreatheScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheScroller.swift; sourceTree = "<group>"; };
 		DE51212F25F4B7DC00AF5320 /* QuoteBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBlock.swift; sourceTree = "<group>"; };
+		DE84289A2603D02100DC35FD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DE95208F25EF2B480035358F /* Poz-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poz-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE95209225EF2B480035358F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE95209425EF2B480035358F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,8 +155,6 @@
 		DED501F425FDDC75008FBD91 /* JournalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalPicker.swift; sourceTree = "<group>"; };
 		DED501FC25FE6F93008FBD91 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		DEF25C1925FEE8A400EFBB5C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		DEF25C1E25FEF74A00EFBB5C /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DEF25C1F25FEF74A00EFBB5C /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DEF25C2C2600124700EFBB5C /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		DEF25C36260021AF00EFBB5C /* TagEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagEntry.swift; sourceTree = "<group>"; };
 		DEFE954C25F6856300AE5BF5 /* HorizontalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPicker.swift; sourceTree = "<group>"; };
@@ -221,11 +217,10 @@
 		DE95209125EF2B480035358F /* Poz-v2 */ = {
 			isa = PBXGroup;
 			children = (
-				DEF25C1E25FEF74A00EFBB5C /* Note+CoreDataClass.swift */,
-				DEF25C1F25FEF74A00EFBB5C /* Note+CoreDataProperties.swift */,
 				DE95209225EF2B480035358F /* AppDelegate.swift */,
 				DE95209425EF2B480035358F /* SceneDelegate.swift */,
 				DE95209625EF2B480035358F /* ContentView.swift */,
+				DE84289A2603D02100DC35FD /* Home.swift */,
 				DE51212225F344F600AF5320 /* NoteScroller.swift */,
 				DE51212A25F34F4600AF5320 /* BreatheScroller.swift */,
 				DED501F425FDDC75008FBD91 /* JournalPicker.swift */,
@@ -236,6 +231,7 @@
 				DE95210225EF54C10035358F /* Dashboard.swift */,
 				DE95211D25EFF6C70035358F /* Stats.swift */,
 				DE9520CE25EF2D5D0035358F /* NotesList.swift */,
+				DEFF2E6925F9F6F9005597B2 /* Notebook.swift */,
 				DE95211325EF82000035358F /* addNote.swift */,
 				DEF25C36260021AF00EFBB5C /* TagEntry.swift */,
 				DED501EF25FC0369008FBD91 /* SearchView.swift */,
@@ -250,7 +246,6 @@
 				DEFE955325F6897800AE5BF5 /* EmojiPicker.swift */,
 				DE9520D525EF508E0035358F /* BottomTabsMenu.swift */,
 				DE95209B25EF2B480035358F /* Assets.xcassets */,
-				DEFF2E6925F9F6F9005597B2 /* Notebook.swift */,
 				DE9520A025EF2B480035358F /* LaunchScreen.storyboard */,
 				DE9520A325EF2B480035358F /* Info.plist */,
 				DEF25C2C2600124700EFBB5C /* Poppins-Bold.ttf */,
@@ -441,10 +436,9 @@
 			files = (
 				DEFE954D25F6856300AE5BF5 /* HorizontalPicker.swift in Sources */,
 				DEF25C37260021AF00EFBB5C /* TagEntry.swift in Sources */,
-				DEF25C2025FEF74A00EFBB5C /* Note+CoreDataClass.swift in Sources */,
 				DED501F525FDDC75008FBD91 /* JournalPicker.swift in Sources */,
+				DE84289B2603D02100DC35FD /* Home.swift in Sources */,
 				DED501D825FB4B9D008FBD91 /* TextField.swift in Sources */,
-				DEF25C2325FEF74A00EFBB5C /* Note+CoreDataProperties.swift in Sources */,
 				DEF25C1A25FEE8A400EFBB5C /* ImagePicker.swift in Sources */,
 				DE95218E25F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DE51212B25F34F4600AF5320 /* BreatheScroller.swift in Sources */,
@@ -489,15 +483,14 @@
 				DEFF2EE425FA6836005597B2 /* ContentView.swift in Sources */,
 				DEFF2F0C25FA6EB7005597B2 /* NoteScroller.swift in Sources */,
 				DEFF2F5925FA6ED9005597B2 /* BottomTabsMenu.swift in Sources */,
+				DE84289C2603D02100DC35FD /* Home.swift in Sources */,
 				DE9520AD25EF2B490035358F /* Poz_v2Tests.swift in Sources */,
-				DEF25C2125FEF74A00EFBB5C /* Note+CoreDataClass.swift in Sources */,
 				DEFF2F6125FA6EDB005597B2 /* Notebook.swift in Sources */,
 				DEFF2F3425FA6ECB005597B2 /* NotesList.swift in Sources */,
 				DEFF2F5125FA6ED6005597B2 /* EmojiPicker.swift in Sources */,
 				DE95218F25F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DEFF2EF425FA6D9B005597B2 /* EnterName.swift in Sources */,
 				DEFF2EE025FA682C005597B2 /* SceneDelegate.swift in Sources */,
-				DEF25C2425FEF74A00EFBB5C /* Note+CoreDataProperties.swift in Sources */,
 				DEFF2F2425FA6EBF005597B2 /* TopTabMenu.swift in Sources */,
 				DEFF2F3C25FA6ECE005597B2 /* Authentication.swift in Sources */,
 			);
@@ -520,15 +513,14 @@
 				DEFF2EE825FA6836005597B2 /* ContentView.swift in Sources */,
 				DEFF2F1025FA6EB7005597B2 /* NoteScroller.swift in Sources */,
 				DEFF2F5D25FA6ED9005597B2 /* BottomTabsMenu.swift in Sources */,
+				DE84289D2603D02100DC35FD /* Home.swift in Sources */,
 				DE9520B825EF2B490035358F /* Poz_v2UITests.swift in Sources */,
-				DEF25C2225FEF74A00EFBB5C /* Note+CoreDataClass.swift in Sources */,
 				DEFF2F6525FA6EDB005597B2 /* Notebook.swift in Sources */,
 				DEFF2F3825FA6ECB005597B2 /* NotesList.swift in Sources */,
 				DEFF2F5525FA6ED7005597B2 /* EmojiPicker.swift in Sources */,
 				DE95219025F16AB80035358F /* Poz.xcdatamodeld in Sources */,
 				DEFF2EF825FA6D9C005597B2 /* EnterName.swift in Sources */,
 				DEFF2EDC25FA682C005597B2 /* SceneDelegate.swift in Sources */,
-				DEF25C2525FEF74A00EFBB5C /* Note+CoreDataProperties.swift in Sources */,
 				DEFF2F2825FA6EBF005597B2 /* TopTabMenu.swift in Sources */,
 				DEFF2F4025FA6ECE005597B2 /* Authentication.swift in Sources */,
 			);

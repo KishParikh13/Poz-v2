@@ -23,6 +23,8 @@ struct Notebook: View {
     
     @State private var temptext = "";
     
+    @EnvironmentObject var bookOpen: BookOpen
+    
     
     @State var image: Data = .init(count: 0)
     @State var show = false
@@ -45,33 +47,51 @@ struct Notebook: View {
                     
                     // note page
                     VStack (alignment: .leading) {
-
-                        ScrollView (.vertical, showsIndicators: false) {
-                            
-                            //top bar
+                        
+                        
+                        //top bar
+                        VStack {
+                        
                             HStack {
-                                Button (action: {notesListShowing.toggle()}) {
-                                    Image(systemName: "list.bullet")
-                                }
-                                .sheet(isPresented: $notesListShowing, content: { NotesList() })
-                                
+                                Text(notes.date ?? "1/1/1")
+                                    .font(Font.custom("Poppins-Bold", size: 16))
+                                    .foregroundColor(Color.primary)
+
                                 Spacer()
+
+                                // emoji putput
+                                Text(notes.emoji ?? "X")
+                                    .font(.system(size: 16))
+                                    .padding(.horizontal, 0)
                                 
-                                Text(notes.date ?? "?/?/????")
-                                    .font(.system(size: 16, weight: .bold))
-                                
-                                Spacer()
-                                
-                                Button (action: {
-                                    editing.toggle()
-                                    temptext = notes.note ?? ""
-                                }) {
-                                    Image(systemName: "pencil")
+                                // tag
+                                HStack {
+                                    Text(notes.entryTag ?? "")
+//                                        .padding(.horizontal, 7)
+//                                        .padding(.top, 4)
+//                                        .padding(.bottom, 4)
+//                                        .background(selectedTag.color)
                                 }
-//                                .sheet(isPresented: , content: { })
-                            }
-                            .padding(.top, 50)
+                                .foregroundColor(Color.primary)
+                                .cornerRadius(5)
+
                             
+                            
+                            
+                         
+                        }
+                            
+                        Rectangle()
+                            .frame(width: UIScreen.main.bounds.width - 40, height: 1)
+                            .foregroundColor(Color.primary)
+                        
+                    }
+                    .padding(.top, 16)
+//                        .padding(.top, 16)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 3)
+
+                    ScrollView (.vertical, showsIndicators: false) {
 
                             if (editing) {
                                 
@@ -86,6 +106,7 @@ struct Notebook: View {
                                     TextEditor(text: $temptext)
                                         .background(Color.clear)
                                         .font(.system(size: 20))
+                                        .padding(.top, 8)
     //                                    .frame(height: 200)
                                     
                                     //submit button
@@ -109,13 +130,12 @@ struct Notebook: View {
                                 .padding(.top, -16)
                                 .padding(.leading, -5)
                             } else {
-                                Text(notes.emoji ?? "")
-                                    .font(.system(size: 48))
                                 
                                 VStack (alignment: .leading) {
                                     Text(notes.note ?? "Could not load note")
-                                        .font(.system(size: 20))
+                                        .font(Font.custom("Poppins-Regular", size: 16))
                                 }
+                                .padding(.top, 8)
                                 
                                 if (self.image.count != 0) {
                                     Image(uiImage: UIImage(data: self.image)!)
@@ -128,10 +148,11 @@ struct Notebook: View {
                             }
                             
                         }
-                        .padding()
+                        .padding(.top, -11)
+                        .padding(.horizontal, 20)
                     }
 //                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                    .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9884551167, green: 1, blue: 0.9494463801, alpha: 1)))
+                    .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9882352941, green: 1, blue: 0.9490196078, alpha: 1)))
                     .ignoresSafeArea(edges: .all)
                 }
                 .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9882352941, green: 1, blue: 0.9490196078, alpha: 1)))
@@ -154,7 +175,8 @@ struct Notebook: View {
             }
             
             
-            addNote() //.environment(\.managedObjectContext, self.moc)
+            addNote().environmentObject(bookOpen) //.environment(\.managedObjectContext, self.moc)
+
         }
         .onAppear {
            DispatchQueue.main.async {
@@ -164,8 +186,9 @@ struct Notebook: View {
         .background(colorScheme == .dark ? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)) : Color(#colorLiteral(red: 0.9884551167, green: 1, blue: 0.9494463801, alpha: 1)))
         .ignoresSafeArea(edges: .all)
     }
-
 }
+
+
 
 struct Buttons: View {
     var body: some View {

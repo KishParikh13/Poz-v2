@@ -2,12 +2,12 @@ import SwiftUI
 
 struct Dashboard: View {
     
-    @State var index = 0
+    @State var index = 1
     @State var offset : CGFloat = 0
     
     var body: some View {
         VStack {
-            appTopBar(index: self.$index, offset: self.$offset)
+//            appTopBar(index: self.$index, offset: self.$offset)
             
             if (index == 0) {
 //                NotesList()
